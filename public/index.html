@@ -629,16 +629,22 @@
                 if (data.success && data.user) {
                     showAuthenticatedUI(data.user);
                 } else {
-                    // 設置當前頁面狀態為登入頁面
-                    window.currentPage = 'login';
-                    showLoginUI();
+                    window.currentPage = 'home';
+                    const navLinks = document.getElementById('navLinks');
+                    if (navLinks) navLinks.style.display = 'flex';
+                    const userAvatar = document.getElementById('userAvatar');
+                    if (userAvatar) userAvatar.style.display = 'none';
+                    const logoutBtn = document.getElementById('logoutBtn');
+                    if (logoutBtn) logoutBtn.style.display = 'none';
+                    showHomePage();
+                    addNavigationHandlers();
                 }
             } catch (error) {
                 console.error('檢查認證狀態失敗:', error);
-                // 設置當前頁面狀態為登入頁面
-                window.currentPage = 'login';
-                showLoginUI();
-            }
+                window.currentPage = 'home';
+                showHomePage();
+                addNavigationHandlers();
+            
         }
 
         // 顯示已認證的 UI
@@ -678,48 +684,23 @@
         // 顯示登入 UI
         function showLoginUI() {
             // 設置當前頁面狀態
-            window.currentPage = 'login';
-            
-            // 隱藏導航按鈕和用戶按鈕
-            const navLinks = document.getElementById('navLinks');
-            const userAvatar = document.getElementById('userAvatar');
-            const logoutBtn = document.getElementById('logoutBtn');
-            
-            if (navLinks) navLinks.style.display = 'none';
-            if (userAvatar) userAvatar.style.display = 'none';
-            if (logoutBtn) logoutBtn.style.display = 'none';
-            
-            // 添加登入按鈕到主內容區域
+            window.currentPage = 'home';
+            // 未登入也顯示首頁與搜尋，僅在首頁額外提供「使用 Google 登入」按鈕
             const main = document.getElementById('mainContent');
             if (main) {
-                const loginTitle = window.translations ? window.translations['login-title'] : '歡迎使用神學知識庫';
-                const loginSubtitle = window.translations ? window.translations['login-subtitle'] : '請登入以開始使用';
                 const loginButton = window.translations ? window.translations['login-button'] : '使用 Google 登入';
-                
-                main.innerHTML = `
-                    <div class="text-center px-4 sm:px-6">
-                        <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8 max-w-sm sm:max-w-md mx-auto">
-                            <h2 class="text-xl sm:text-2xl font-bold text-[var(--primary)] mb-3 sm:mb-4">${loginTitle}</h2>
-                            <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">${loginSubtitle}</p>
-                            <button onclick="login()" class="submit-btn px-4 sm:px-6 py-3 rounded-full flex items-center mx-auto min-h-[44px] text-sm sm:text-base">
-                                <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                    <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                    <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                    <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                                </svg>
-                                ${loginButton}
-                            </button>
-                        </div>
-                    </div>
-                `;
+                showHomePage();
+                // 在首頁 hero 下方加一個輕量登入提示
+                const hero = document.getElementById('homeHero');
+                if (hero) {
+                    const info = document.createElement('div');
+                    info.className = 'text-center mt-3';
+                    info.innerHTML = `<button onclick="login()" class="submit-btn px-4 sm:px-6 py-2 rounded-full inline-flex items-center mx-auto min-h-[40px] text-sm">${loginButton}</button>`;
+                    hero.appendChild(info);
+                }
             }
-            
-            // 隱藏搜尋輸入框，只在首頁顯示
             const footer = document.querySelector('footer');
-            if (footer) {
-                footer.style.display = 'none';
-            }
+            if (footer) footer.style.display = 'block';
         }
 
         // 顯示搜索 UI
@@ -1263,9 +1244,7 @@
             }
             
             // 根據當前頁面狀態重新顯示以更新翻譯
-            if (window.currentPage === 'login') {
-                showLoginUI();
-            } else if (window.currentPage === 'home') {
+            if (window.currentPage === 'home') {
                 showHomePage();
             } else if (window.currentPage === 'catalog') {
                 showCatalogPage();

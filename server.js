@@ -1172,8 +1172,8 @@ app.post('/api/test-search', async (req, res) => {
 
 
 
-// 主要搜索 API 端點 - 需要認證
-app.post('/api/search', ensureAuthenticated, async (req, res) => {
+// 主要搜索 API 端點 - 支援未登入訪客（可透過 REQUIRE_AUTH 控制）
+app.post('/api/search', async (req, res) => {
   try {
     const { question, language = 'zh' } = req.body;
 
@@ -1185,14 +1185,27 @@ app.post('/api/search', ensureAuthenticated, async (req, res) => {
     }
 
     const trimmedQuestion = question.trim();
-    console.log(`收到搜索請求: ${trimmedQuestion} (用戶: ${req.user.email}, 語言: ${language})`);
 
-    // 設置響應頭，改善移動設備相容性
+    const isAuthenticated = typeof req.isAuthenticated === 'function' ? req.isAuthenticated() : false;
+    const requireAuth = process.env.REQUIRE_AUTH === 'true';
+
+    if (!isAuthenticated && requireAuth) {
+      return res.status(401).json({
+        success: false,
+        error: '需要登入才能使用此功能',
+        requiresAuth: true
+      });
+    }
+
+    const userForProcessing = isAuthenticated && req.user ? req.user : { email: 'guest@anonymous' };
+    const userEmailForLog = userForProcessing && userForProcessing.email ? userForProcessing.email : 'guest@anonymous';
+
+    console.log(`收到搜索請求: ${trimmedQuestion} (用戶: ${userEmailForLog}, 語言: ${language})`);
+
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
 
-    // 使用 OpenAI Assistant API
-    const result = await processSearchRequest(trimmedQuestion, req.user, language);
+    const result = await processSearchRequest(trimmedQuestion, userForProcessing, language);
 
     console.log('搜索處理完成，返回結果:', JSON.stringify(result, null, 2));
 

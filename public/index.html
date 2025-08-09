@@ -1848,74 +1848,88 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ bookEn: displayBook.en, ref, translation, language: window.currentLanguage || 'zh' })
                 })
-                .then(r => r.json())
-                .then(j => {
-                    const box = document.getElementById('explanation');
-                    if (j && j.success) {
-                        const html = refineExplanationHtml(formatAnswer(j.data.answer, j.data.sources));
-                        const sources = Array.isArray(j.data.sources) ? j.data.sources : [];
-                        const srcList = sources.length ? (`<div class=\"explain-sources\"><h4>參考來源</h4><ol>` + sources.map((s, i) => `<li>[${i+1}] ${typeof s === 'string' ? s : (s.fileName || '來源')}</li>`).join('') + `</ol></div>`) : '';
-                        box.innerHTML = `
-                          <div class=\"explain-toolbar\"> 
-                            <button id=\"exFontDec\">A-</button>
-                            <button id=\"exFontInc\">A+</button>
-                            <button id=\"exLhDec\">行距-</button>
-                            <button id=\"exLhInc\">行距+</button>
-                            <button id=\"exWidth\">窄版</button>
-                            <button id=\"exIndent\">首行縮排</button>
-                            <button id=\"exCopyAll\">複製全文</button>
-                          </div>
-                          <div class=\"explain-content\" id=\"exContent\">${html}</div>
-                          ${srcList}
-                        `;
-                        // events
-                        const contentEl = document.getElementById('exContent');
-                        document.getElementById('exFontDec').addEventListener('click', () => {
-                          const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-font')) || 16;
-                          const next = Math.max(13, cur - 1);
-                          contentEl.style.setProperty('--ex-font', next + 'px');
-                        });
-                        document.getElementById('exFontInc').addEventListener('click', () => {
-                          const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-font')) || 16;
-                          const next = Math.min(22, cur + 1);
-                          contentEl.style.setProperty('--ex-font', next + 'px');
-                        });
-                        document.getElementById('exLhDec').addEventListener('click', () => {
-                          const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-lh')) || 1.9;
-                          const next = Math.max(1.5, +(cur - 0.1).toFixed(2));
-                          contentEl.style.setProperty('--ex-lh', next);
-                        });
-                        document.getElementById('exLhInc').addEventListener('click', () => {
-                          const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-lh')) || 1.9;
-                          const next = Math.min(2.2, +(cur + 0.1).toFixed(2));
-                          contentEl.style.setProperty('--ex-lh', next);
-                        });
-                        document.getElementById('exWidth').addEventListener('click', (e) => {
-                          const cur = getComputedStyle(contentEl).getPropertyValue('--ex-max').trim();
-                          const narrow = (cur === '70ch');
-                          contentEl.style.setProperty('--ex-max', narrow ? '78ch' : '70ch');
-                          e.currentTarget.textContent = narrow ? '寬版' : '窄版';
-                        });
-                        document.getElementById('exIndent').addEventListener('click', (e) => {
-                          const cur = getComputedStyle(contentEl).getPropertyValue('--ex-indent').trim();
-                          const indented = cur !== '0px' && cur !== '0';
-                          contentEl.style.setProperty('--ex-indent', indented ? '0' : '1.5em');
-                          e.currentTarget.textContent = indented ? '首行縮排' : '取消縮排';
-                        });
-                        document.getElementById('exCopyAll').addEventListener('click', async () => {
-                          const verseText = (document.getElementById('exVerse')?.textContent || '').trim();
-                          const text = `${document.getElementById('crumbRef')?.textContent || ''}\\n${verseText}\\n\\n` + contentEl.innerText;
-                          try { await navigator.clipboard.writeText(text); } catch {}
-                        });
-                        bindCitationEvents();
-                    } else {
-                        box.innerHTML = `<div class=\"text-red-600 text-sm\">生成解釋失敗</div>`;
-                    }
-                })
-                .catch(() => {
-                    const box = document.getElementById('explanation');
-                    if (box) box.innerHTML = `<div class=\"text-red-600 text-sm\">生成解釋失敗</div>`;
-                });
+-                .then(r => r.json())
+-                .then(j => {
++                .then(async r => {
++                    let j = null;
++                    try { j = await r.json(); } catch {}
++                    if (!r.ok || !j || j.success === false) {
++                        const requires = j && (j.requiresAuth || j.error === '需要登入才能使用此功能');
++                        const msg = j?.error || (requires ? '需要登入，請先登入' : `生成解釋失敗（${r.status}）`);
++                        if (requires || r.status === 401) { showLoginUI(); return Promise.reject(new Error('auth')); }
++                        const box = document.getElementById('explanation');
++                        if (box) box.innerHTML = `<div class=\"text-red-600 text-sm\">${msg}</div>`;
++                        return Promise.reject(new Error(msg));
++                    }
++                    return j;
++                })
++                .then(j => {
+                     const box = document.getElementById('explanation');
+                     if (j && j.success) {
+                         const html = refineExplanationHtml(formatAnswer(j.data.answer, j.data.sources));
+                         const sources = Array.isArray(j.data.sources) ? j.data.sources : [];
+                         const srcList = sources.length ? (`<div class=\"explain-sources\"><h4>參考來源</h4><ol>` + sources.map((s, i) => `<li>[${i+1}] ${typeof s === 'string' ? s : (s.fileName || '來源')}</li>`).join('') + `</ol></div>`) : '';
+                         box.innerHTML = `
+                           <div class=\"explain-toolbar\"> 
+                             <button id=\"exFontDec\">A-</button>
+                             <button id=\"exFontInc\">A+</button>
+                             <button id=\"exLhDec\">行距-</button>
+                             <button id=\"exLhInc\">行距+</button>
+                             <button id=\"exWidth\">窄版</button>
+                             <button id=\"exIndent\">首行縮排</button>
+                             <button id=\"exCopyAll\">複製全文</button>
+                           </div>
+                           <div class=\"explain-content\" id=\"exContent\">${html}</div>
+                           ${srcList}
+                         `;
+                         // events
+                         const contentEl = document.getElementById('exContent');
+                         document.getElementById('exFontDec').addEventListener('click', () => {
+                           const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-font')) || 16;
+                           const next = Math.max(13, cur - 1);
+                           contentEl.style.setProperty('--ex-font', next + 'px');
+                         });
+                         document.getElementById('exFontInc').addEventListener('click', () => {
+                           const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-font')) || 16;
+                           const next = Math.min(22, cur + 1);
+                           contentEl.style.setProperty('--ex-font', next + 'px');
+                         });
+                         document.getElementById('exLhDec').addEventListener('click', () => {
+                           const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-lh')) || 1.9;
+                           const next = Math.max(1.5, +(cur - 0.1).toFixed(2));
+                           contentEl.style.setProperty('--ex-lh', next);
+                         });
+                         document.getElementById('exLhInc').addEventListener('click', () => {
+                           const cur = parseFloat(getComputedStyle(contentEl).getPropertyValue('--ex-lh')) || 1.9;
+                           const next = Math.min(2.2, +(cur + 0.1).toFixed(2));
+                           contentEl.style.setProperty('--ex-lh', next);
+                         });
+                         document.getElementById('exWidth').addEventListener('click', (e) => {
+                           const cur = getComputedStyle(contentEl).getPropertyValue('--ex-max').trim();
+                           const narrow = (cur === '70ch');
+                           contentEl.style.setProperty('--ex-max', narrow ? '78ch' : '70ch');
+                           e.currentTarget.textContent = narrow ? '寬版' : '窄版';
+                         });
+                         document.getElementById('exIndent').addEventListener('click', (e) => {
+                           const cur = getComputedStyle(contentEl).getPropertyValue('--ex-indent').trim();
+                           const indented = cur !== '0px' && cur !== '0';
+                           contentEl.style.setProperty('--ex-indent', indented ? '0' : '1.5em');
+                           e.currentTarget.textContent = indented ? '首行縮排' : '取消縮排';
+                         });
+                         document.getElementById('exCopyAll').addEventListener('click', async () => {
+                           const verseText = (document.getElementById('exVerse')?.textContent || '').trim();
+                           const text = `${document.getElementById('crumbRef')?.textContent || ''}\\n${verseText}\\n\\n` + contentEl.innerText;
+                           try { await navigator.clipboard.writeText(text); } catch {}
+                         });
+                         bindCitationEvents();
+                     } else {
+                         box.innerHTML = `<div class=\"text-red-600 text-sm\">生成解釋失敗</div>`;
+                     }
+                 })
+                 .catch(() => {
+                     const box = document.getElementById('explanation');
+                     if (box) box.innerHTML = `<div class=\"text-red-600 text-sm\">生成解釋失敗</div>`;
+                 });
             }
 
             // 預設顯示舊約
@@ -1962,9 +1976,13 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ bookEn: engsToEnglish(engs), ref: `${engsToEnglish(engs)} ${chapter}:${vFrom || vTo || ''}`.trim(), translation: version, language: window.currentLanguage || 'zh' })
                 });
-                const json = await resp.json();
-                if (!json.success) {
-                    container.innerHTML = `<div class="text-red-600 text-sm">生成解釋失敗：${json.error || '未知錯誤'}</div>`;
+                let json = null;
+                try { json = await resp.json(); } catch {}
+                if (!resp.ok || !json || json.success === false) {
+                    const requires = json && (json.requiresAuth || json.error === '需要登入才能使用此功能');
+                    const msg = json?.error || (requires ? '需要登入，請先登入' : `生成解釋失敗（${resp.status}）`);
+                    if (requires || resp.status === 401) { showLoginUI(); return; }
+                    container.innerHTML = `<div class="text-red-600 text-sm">${msg}</div>`;
                     return;
                 }
                 // 重用首頁渲染邏輯

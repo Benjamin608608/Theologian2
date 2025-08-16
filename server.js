@@ -2108,16 +2108,35 @@ async function processBibleExplainRequest(question, targetVectorStoreId, user, l
 // 新版本：基於工具呼叫的聖經註釋串流處理
 async function processBibleCommentaryToolStream(bookEn, ref, translation, passageText, targetVectorStoreId, user, language, res) {
   try {
-    // 載入聖經經卷配置
-    const booksConfig = require('./config/bible-books-config.json');
-    const bookConfig = booksConfig[bookEn];
-    
-    if (!bookConfig) {
-      throw new Error(`未找到 ${bookEn} 的配置`);
+    // 載入聖經經卷配置（用於作者清單和向量資料庫 ID）
+    let booksConfig, bookConfig;
+    try {
+      booksConfig = require('./config/bible-books-config.json');
+      bookConfig = booksConfig[bookEn];
+      
+      if (!bookConfig) {
+        throw new Error(`未找到 ${bookEn} 的配置`);
+      }
+      
+      console.log(`📖 使用硬編碼配置 - ${bookEn}: ${bookConfig.storeId}`);
+      
+    } catch (error) {
+      // 如果配置文件不存在，使用默認配置
+      console.warn(`⚠️ 無法載入配置文件，使用默認配置: ${error.message}`);
+      bookConfig = {
+        storeId: targetVectorStoreId, // 使用傳入的 ID 作為備用
+        authors: [
+          { id: 'henry', name: 'Matthew Henry', fullName: 'Matthew Henry' },
+          { id: 'calvin', name: 'John Calvin', fullName: 'John Calvin' },
+          { id: 'spurgeon', name: 'Charles Spurgeon', fullName: 'Charles Spurgeon' }
+        ],
+        files: [`[預設] ${bookEn} 資料庫文件`]
+      };
     }
     
-    // 建立工具 Assistant（使用目標經卷的向量資料庫）
-    const assistant = await getOrCreateBibleCommentaryAssistant(targetVectorStoreId);
+    // 使用配置中的硬編碼 ID，確保正確性
+    const actualVectorStoreId = bookConfig.storeId || targetVectorStoreId;
+    const assistant = await getOrCreateBibleCommentaryAssistant(actualVectorStoreId);
     const thread = await openai.beta.threads.create();
 
     // 從配置中提取作者清單和文件清單
@@ -2182,7 +2201,7 @@ ${fileList}`;
     const stream = await openai.beta.threads.runs.stream(thread.id, {
       assistant_id: assistant.id,
       tool_resources: {
-        file_search: { vector_store_ids: [targetVectorStoreId] }
+        file_search: { vector_store_ids: [actualVectorStoreId] }
       }
     });
     console.log('📡 串流已建立，等待事件...');
@@ -3176,6 +3195,47 @@ app.get('/api/bible/book-config/:bookEn', ensureAuthenticated, async (req, res) 
     res.status(500).json({ 
       success: false, 
       error: '讀取配置失敗' 
+    });
+  }
+});
+
+// 檢查實際可用的向量資料庫
+app.get('/api/debug/vector-stores', ensureAuthenticated, async (req, res) => {
+  try {
+    console.log('🔍 檢查可用的向量資料庫...');
+    
+    const stores = await openai.vectorStores.list({ limit: 20 });
+    const storeList = stores.data.map(store => ({
+      id: store.id,
+      name: store.name,
+      fileCount: store.file_counts?.total || 0,
+      status: store.status
+    }));
+    
+    // 特別檢查 Genesis
+    const genesisStore = stores.data.find(s => s.name && (
+      s.name.includes('Genesis') || 
+      s.name.includes('Bible-Genesis') ||
+      s.name.toLowerCase().includes('genesis')
+    ));
+    
+    res.json({
+      success: true,
+      totalStores: stores.data.length,
+      stores: storeList,
+      genesisStore: genesisStore ? {
+        id: genesisStore.id,
+        name: genesisStore.name,
+        fileCount: genesisStore.file_counts?.total || 0,
+        status: genesisStore.status
+      } : null
+    });
+    
+  } catch (error) {
+    console.error('檢查向量資料庫錯誤:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: error.message 
     });
   }
 });

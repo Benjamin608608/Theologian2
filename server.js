@@ -223,52 +223,56 @@ const PREFERRED_ASSISTANT_MODEL = process.env.OPENAI_ASSISTANT_MODEL || process.
 const BIBLE_COMMENTARY_TOOLS = [
   {
     type: "function",
-    name: "emit_commentary",
-    description: "輸出某位作者對當前經文的註釋",
-    parameters: {
-      type: "object",
-      properties: {
-        author_id: { 
-          type: "string", 
-          description: "作者ID"
+    function: {
+      name: "emit_commentary",
+      description: "輸出某位作者對當前經文的註釋",
+      parameters: {
+        type: "object",
+        properties: {
+          author_id: { 
+            type: "string", 
+            description: "作者ID"
+          },
+          commentary: { 
+            type: "string",
+            description: "該作者的註釋內容"
+          },
+          citations: {
+            type: "array",
+            items: { type: "string" },
+            description: "引用來源ID清單"
+          }
         },
-        commentary: { 
-          type: "string",
-          description: "該作者的註釋內容"
-        },
-        citations: {
-          type: "array",
-          items: { type: "string" },
-          description: "引用來源ID清單"
-        }
-      },
-      required: ["author_id", "commentary"],
-      additionalProperties: false
+        required: ["author_id", "commentary"],
+        additionalProperties: false
+      }
     }
   },
   {
-    type: "function",
-    name: "emit_sources",
-    description: "輸出本次回答用到的來源清單",
-    parameters: {
-      type: "object",
-      properties: {
-        sources: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              id: { type: "string" },
-              title: { type: "string" },
-              loc: { type: "string" }
-            },
-            required: ["id", "title"],
-            additionalProperties: false
+    type: "function", 
+    function: {
+      name: "emit_sources",
+      description: "輸出本次回答用到的來源清單",
+      parameters: {
+        type: "object",
+        properties: {
+          sources: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                id: { type: "string" },
+                title: { type: "string" },
+                loc: { type: "string" }
+              },
+              required: ["id", "title"],
+              additionalProperties: false
+            }
           }
-        }
-      },
-      required: ["sources"],
-      additionalProperties: false
+        },
+        required: ["sources"],
+        additionalProperties: false
+      }
     }
   }
 ];

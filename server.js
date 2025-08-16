@@ -1287,11 +1287,11 @@ function setCachedResult(question, result) {
     }
 }
 
-// 獲取或創建聖經註釋工具 Assistant
-async function getOrCreateBibleCommentaryAssistant() {
+// 獲取或創建聖經註釋工具 Assistant  
+async function getOrCreateBibleCommentaryAssistant(targetVectorStoreId = null) {
     console.log('🔄 創建聖經註釋工具 Assistant...');
     
-    const vectorStoreId = process.env.VECTOR_STORE_ID;
+    const vectorStoreId = targetVectorStoreId || process.env.VECTOR_STORE_ID;
     
     try {
         let modelToUse = 'gpt-4o'; // 直接使用穩定的模型
@@ -2108,30 +2108,27 @@ async function processBibleExplainRequest(question, targetVectorStoreId, user, l
 // 新版本：基於工具呼叫的聖經註釋串流處理
 async function processBibleCommentaryToolStream(bookEn, ref, translation, passageText, targetVectorStoreId, user, language, res) {
   try {
-    // 建立工具 Assistant
-    const assistant = await getOrCreateBibleCommentaryAssistant();
+    // 建立工具 Assistant（使用目標經卷的向量資料庫）
+    const assistant = await getOrCreateBibleCommentaryAssistant(targetVectorStoreId);
     const thread = await openai.beta.threads.create();
 
-    // 從向量庫檢索相關來源（簡化版本）
-    const availableAuthors = ['calvin', 'luther', 'augustine', 'henry', 'spurgeon'];
-    const availableSources = [
-      { id: 'S1', title: 'Calvin, Commentary on John', loc: 'Jn 3:16' },
-      { id: 'S2', title: 'Luther, Works, Vol X', loc: 'p.123' },
-      { id: 'S3', title: 'Augustine, Homilies on John', loc: 'Hom 12' },
-      { id: 'S4', title: 'Henry, Commentary on the Whole Bible', loc: bookEn + ' ' + ref },
-      { id: 'S5', title: 'Spurgeon, Treasury of David', loc: 'Ps ' + ref }
-    ];
+    // 構建用戶訊息（讓 AI 直接從向量資料庫中檢索）
+    const userMessage = `請為以下經文生成多位神學家的註釋：
 
-    // 構建用戶訊息
-    const userMessage = `經文：${bookEn} ${ref}
+經文：${bookEn} ${ref}
 ${translation ? `版本：${translation}` : ''}
 ${passageText ? `經文內容：\n${passageText}` : ''}
 
-可用作者 ID：${availableAuthors.join(', ')}
-可引用來源：
-${availableSources.map(s => `${s.id} ${s.title} — ${s.loc}`).join('\n')}
+請使用 file_search 從 ${bookEn} 卷的註釋資料庫中檢索相關內容，然後：
 
-任務：請依規則產生每位相關作者的註釋，並引用適當的來源ID。只處理與此經文相關的作者。`;
+1. 對找到的每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
+2. author_id 使用以下格式之一：calvin, luther, augustine, chrysostom, aquinas, wesley, spurgeon, henry, clarke, gill
+3. 如果資料庫中的作者不在上述清單中，請選擇最接近的 ID 或使用 "other"
+4. citations 引用具體的檔案來源
+5. 最後呼叫 emit_sources({sources}) 列出所有使用的來源
+6. 每位作者的 commentary 應該在 120-180 字之間
+
+重要：請確保從 ${bookEn} 卷的資料庫中檢索，並只針對 ${ref} 這個特定經文生成註釋。`;
 
     await openai.beta.threads.messages.create(thread.id, {
       role: 'user',
@@ -2173,18 +2170,6 @@ ${availableSources.map(s => `${s.id} ${s.title} — ${s.loc}`).join('\n')}
         const args = JSON.parse(func.arguments);
         
         if (func.name === 'emit_commentary') {
-          // 驗證 author_id
-          if (!availableAuthors.includes(args.author_id)) {
-            console.warn(`無效的 author_id: ${args.author_id}`);
-            return;
-          }
-          
-          // 驗證 citations
-          if (args.citations) {
-            const validSources = availableSources.map(s => s.id);
-            args.citations = args.citations.filter(c => validSources.includes(c));
-          }
-          
           // 獲取顯示名稱
           const displayName = COMMENTARY_AUTHORS[args.author_id] || args.author_id;
           
@@ -2202,15 +2187,10 @@ ${availableSources.map(s => `${s.id} ${s.title} — ${s.loc}`).join('\n')}
         } else if (func.name === 'emit_sources' && !sourcesReceived) {
           sourcesReceived = true;
           
-          // 驗證來源清單
-          const validSources = args.sources.filter(s => 
-            availableSources.some(as => as.id === s.id)
-          );
-          
           // 發送來源事件
           const sourcesEvent = {
             type: 'sources',
-            items: validSources
+            items: args.sources || []
           };
           
           res.write(`data: ${JSON.stringify(sourcesEvent)}\n\n`);

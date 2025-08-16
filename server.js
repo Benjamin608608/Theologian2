@@ -224,22 +224,22 @@ const BIBLE_COMMENTARY_TOOLS = [
   {
     type: "function",
     name: "emit_commentary",
-    description: "輸出某位作者對當前經文的註釋（每位作者呼叫一次）",
+    description: "輸出某位作者對當前經文的註釋",
     parameters: {
       type: "object",
       properties: {
         author_id: { 
           type: "string", 
-          description: "作者ID，必須來自提供的作者清單"
+          description: "作者ID"
         },
         commentary: { 
           type: "string",
-          description: "該作者的註釋內容，建議120-180字或3-5點條列"
+          description: "該作者的註釋內容"
         },
         citations: {
           type: "array",
           items: { type: "string" },
-          description: "引用來源ID清單（如 S1、S2...），必須來自提供的來源清單"
+          description: "引用來源ID清單"
         }
       },
       required: ["author_id", "commentary"],
@@ -258,9 +258,9 @@ const BIBLE_COMMENTARY_TOOLS = [
           items: {
             type: "object",
             properties: {
-              id: { type: "string", description: "來源ID（如 S1）" },
-              title: { type: "string", description: "書名或條目名稱" },
-              loc: { type: "string", description: "章節或頁碼（可選）" }
+              id: { type: "string" },
+              title: { type: "string" },
+              loc: { type: "string" }
             },
             required: ["id", "title"],
             additionalProperties: false
@@ -1290,7 +1290,7 @@ async function getOrCreateBibleCommentaryAssistant() {
     const vectorStoreId = process.env.VECTOR_STORE_ID;
     
     try {
-        let modelToUse = PREFERRED_ASSISTANT_MODEL;
+        let modelToUse = 'gpt-4o'; // 直接使用穩定的模型
         try {
             const assistant = await openai.beta.assistants.create({
                 model: modelToUse,
@@ -1316,7 +1316,7 @@ async function getOrCreateBibleCommentaryAssistant() {
                     }
                 } : undefined,
                 temperature: 0.2,
-                parallel_tool_calls: true
+
             });
             
             console.log(`✅ 聖經註釋工具 Assistant 創建成功`);
@@ -1348,7 +1348,7 @@ async function getOrCreateBibleCommentaryAssistant() {
                     }
                 } : undefined,
                 temperature: 0.2,
-                parallel_tool_calls: true
+
             });
             
             console.log(`✅ 聖經註釋工具 Assistant 創建成功`);

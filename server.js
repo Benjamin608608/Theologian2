@@ -2136,12 +2136,14 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
     });
 
     // 創建串流 Run
+    console.log('🚀 開始創建工具串流...');
     const stream = await openai.beta.threads.runs.stream(thread.id, {
       assistant_id: assistant.id,
       tool_resources: {
         file_search: { vector_store_ids: [targetVectorStoreId] }
       }
     });
+    console.log('📡 串流已建立，等待事件...');
 
     // 工具呼叫累積器
     const toolCalls = new Map(); // tool_call_id -> { name, args_buffer }
@@ -2149,6 +2151,7 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
 
     // 處理串流事件
     stream.on('toolCallDelta', (toolCallDelta) => {
+      console.log('🔧 收到工具呼叫增量:', JSON.stringify(toolCallDelta));
       const { id, function: func } = toolCallDelta;
       
       if (!toolCalls.has(id)) {
@@ -2156,6 +2159,7 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
           name: func?.name || '',
           args_buffer: ''
         });
+        console.log('🆕 新工具呼叫:', func?.name);
       }
       
       const toolCall = toolCalls.get(id);
@@ -2166,10 +2170,13 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
 
     stream.on('toolCallDone', async (toolCall) => {
       try {
+        console.log('✅ 工具呼叫完成:', JSON.stringify(toolCall));
         const { id, function: func } = toolCall;
         const args = JSON.parse(func.arguments);
+        console.log('📝 解析後的參數:', args);
         
         if (func.name === 'emit_commentary') {
+          console.log('📖 處理 emit_commentary:', args.author_id);
           // 獲取顯示名稱
           const displayName = COMMENTARY_AUTHORS[args.author_id] || args.author_id;
           

@@ -2144,21 +2144,25 @@ async function processBibleCommentaryToolStream(bookEn, ref, translation, passag
 ${translation ? `版本：${translation}` : ''}
 ${passageText ? `經文內容：\n${passageText}` : ''}
 
-資料庫中的作者清單（必須全部覆蓋）：
+目標作者清單（必須全部覆蓋）：
 ${authorList}
 
-資料庫中的文件清單：
-${fileList}
+使用說明：
+1. 首先使用 file_search 工具檢索與「${bookEn} ${ref}」相關的內容
+2. 基於檢索結果和你對這些神學家的了解，為每位作者生成註釋
+3. 對每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
+4. author_id 必須使用上述清單中的確切 ID
+5. commentary 應該反映該作者的神學觀點（120-180字）
+6. citations 引用具體找到的檔案來源
+7. 最後呼叫 emit_sources({sources}) 列出所有來源
 
-強制要求：
-1. 必須對每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
-2. 即使某位作者對此特定經文沒有直接註釋，也要基於其神學觀點提供相關解釋
-3. author_id 必須使用上述清單中的確切 ID
-4. citations 引用具體的檔案名稱
-5. 最後呼叫 emit_sources({sources}) 列出所有使用的來源
-6. 每位作者的 commentary 應該在 120-180 字之間
+重要提醒：
+- 即使某位作者對此特定經文沒有直接註釋，也要基於其整體神學思想提供解釋
+- 不允許遺漏任何作者
+- 請先檢索，再逐一生成每位作者的註釋
 
-重要：不允許遺漏任何作者，必須為每位作者提供註釋，即使內容較為簡短。`;
+資料庫文件清單：
+${fileList}`;
 
     await openai.beta.threads.messages.create(thread.id, {
       role: 'user',
@@ -2253,6 +2257,22 @@ ${fileList}
           console.log(`📊 作者覆蓋率: ${receivedAuthors.size}/${expectedAuthors.size} (${coverageRate}%)`);
           if (missingAuthors.length > 0) {
             console.log(`⚠️ 缺失作者: ${missingAuthors.join(', ')}`);
+            
+            // 為缺失的作者發送占位符
+            missingAuthors.forEach(authorId => {
+              const authorConfig = availableAuthors.find(a => a.id === authorId);
+              const displayName = authorConfig ? `${authorConfig.name} ${authorConfig.fullName.match(/\(([^)]+)\)/)?.[1] || ''}`.trim() : authorId;
+              
+              const placeholderEvent = {
+                type: 'author',
+                author_id: authorId,
+                display: displayName,
+                commentary: '此作者對本經文的具體註釋暫時無法獲取，請參考資料庫中該作者的其他著作。',
+                citations: []
+              };
+              
+              res.write(`data: ${JSON.stringify(placeholderEvent)}\n\n`);
+            });
           }
           
           // 添加資料庫文件清單到來源
@@ -3124,6 +3144,34 @@ app.get('/api/bible/vector-status', ensureAuthenticated, async (req, res) => {
 });
 
 // 列出 66 卷各自資料庫的檔案清單（支援 format=json|txt，預設 json）
+// 獲取經卷配置
+app.get('/api/bible/book-config/:bookEn', ensureAuthenticated, async (req, res) => {
+  try {
+    const { bookEn } = req.params;
+    const booksConfig = require('./config/bible-books-config.json');
+    
+    if (!booksConfig[bookEn]) {
+      return res.status(404).json({ 
+        success: false, 
+        error: `未找到 ${bookEn} 的配置` 
+      });
+    }
+    
+    // 只返回請求的經卷配置
+    res.json({
+      success: true,
+      [bookEn]: booksConfig[bookEn]
+    });
+    
+  } catch (error) {
+    console.error('獲取經卷配置錯誤:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: '讀取配置失敗' 
+    });
+  }
+});
+
 app.get('/api/bible/vector-inventory', ensureAuthenticated, async (req, res) => {
   try {
     const format = (req.query.format || 'json').toString().toLowerCase();

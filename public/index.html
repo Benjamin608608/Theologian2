@@ -4380,10 +4380,16 @@
             // 創建作者骨架卡片
             async function createAuthorSkeletons(bookEn, container) {
                 try {
-                    // 獲取該經卷的作者配置
-                    const response = await fetch(`/config/bible-books-config.json`);
-                    const booksConfig = await response.json();
-                    const bookConfig = booksConfig[bookEn];
+                    // 獲取該經卷的作者配置 - 使用 API 端點
+                    const response = await fetch(`/api/bible/book-config/${bookEn}`);
+                    const responseData = await response.json();
+                    
+                    if (!responseData.success) {
+                        container.innerHTML = `<div class="text-center py-4 text-red-600">配置載入失敗: ${responseData.error}</div>`;
+                        return;
+                    }
+                    
+                    const bookConfig = responseData[bookEn];
                     
                     if (!bookConfig) {
                         container.innerHTML = '<div class="text-center py-4">找不到該經卷的配置</div>';

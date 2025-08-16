@@ -2152,17 +2152,25 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
     // 處理串流事件
     stream.on('toolCallDelta', (toolCallDelta) => {
       console.log('🔧 收到工具呼叫增量:', JSON.stringify(toolCallDelta));
-      const { id, function: func } = toolCallDelta;
+      const { id, function: func, type } = toolCallDelta;
       
-      if (!toolCalls.has(id)) {
-        toolCalls.set(id, {
+      // 只處理 function 類型的工具呼叫
+      if (type !== 'function') {
+        return;
+      }
+      
+      // 有些增量可能沒有 id，使用 index 作為備選
+      const toolId = id || `index_${toolCallDelta.index}`;
+      
+      if (!toolCalls.has(toolId)) {
+        toolCalls.set(toolId, {
           name: func?.name || '',
           args_buffer: ''
         });
         console.log('🆕 新工具呼叫:', func?.name);
       }
       
-      const toolCall = toolCalls.get(id);
+      const toolCall = toolCalls.get(toolId);
       if (func?.arguments) {
         toolCall.args_buffer += func.arguments;
       }
@@ -2171,7 +2179,14 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
     stream.on('toolCallDone', async (toolCall) => {
       try {
         console.log('✅ 工具呼叫完成:', JSON.stringify(toolCall));
-        const { id, function: func } = toolCall;
+        const { id, function: func, type } = toolCall;
+        
+        // 只處理 function 類型的工具呼叫，忽略 file_search
+        if (type !== 'function' || !func || !func.arguments) {
+          console.log('⏭️ 跳過非函數工具呼叫或無參數呼叫');
+          return;
+        }
+        
         const args = JSON.parse(func.arguments);
         console.log('📝 解析後的參數:', args);
         

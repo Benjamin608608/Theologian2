@@ -12,6 +12,10 @@ const rateLimit = require('express-rate-limit');
 const slowDown = require('express-slow-down');
 
 const app = express();
+
+// 日誌控制（避免 Railway log rate limit）
+const DEBUG_TOOL_STREAM = (process.env.DEBUG_TOOL_STREAM || '').toLowerCase() === 'true';
+const TOOL_STREAM_LOG_EVERY = Number(process.env.TOOL_STREAM_LOG_EVERY || 50); // 每 N 次才輸出一次增量
 const PORT = process.env.PORT || 3000;
 
 // 全局變數
@@ -2157,10 +2161,7 @@ async function processBibleCommentaryToolStream(bookEn, ref, translation, passag
     
     const availableFiles = bookConfig.files;
     
-    console.log(`📖 ${bookEn} 資料庫配置:`);
-    console.log(`   - 作者數: ${availableAuthors.length}`);
-    console.log(`   - 文件數: ${availableFiles.length}`);
-    console.log(`   - 作者清單: ${availableAuthors.map(a => a.id).join(', ')}`);
+    console.log(`📖 ${bookEn} 資料庫配置: 作者數=${availableAuthors.length}, 文件數=${availableFiles.length}`);
 
     // 構建強制要求所有作者的用戶訊息
     const authorList = availableAuthors.map(a => `${a.id} (${a.name})`).join(', ');
@@ -2212,7 +2213,9 @@ ${fileList}`;
         file_search: { vector_store_ids: [actualVectorStoreId] }
       },
       // 強制引導先使用 file_search 取得片段再產出工具回覆
-      instructions: '先用 file_search 檢索與經文最相關的片段，至少嘗試 4 組關鍵詞；之後才針對每位作者分別呼叫 emit_commentary，再彙總 emit_sources。'
+      instructions: '先用 file_search 檢索與經文最相關的片段，至少嘗試 4 組關鍵詞；之後才針對每位作者分別呼叫 emit_commentary，再彙總 emit_sources。',
+      // 降低串流頻率
+      stream: { max_event_frequency: 20 }
     });
     console.log('📡 串流已建立，等待事件...');
 
@@ -2223,8 +2226,14 @@ ${fileList}`;
     const expectedAuthors = new Set(availableAuthors.map(a => a.id)); // 預期的作者清單
 
     // 處理串流事件
+    let deltaCount = 0;
     stream.on('toolCallDelta', (toolCallDelta) => {
-      console.log('🔧 收到工具呼叫增量:', JSON.stringify(toolCallDelta));
+      if (DEBUG_TOOL_STREAM) {
+        deltaCount += 1;
+        if (deltaCount % TOOL_STREAM_LOG_EVERY === 0) {
+          console.log('🔧 toolCallDelta x', deltaCount);
+        }
+      }
       const { id, function: func, type } = toolCallDelta;
       
       // 只處理 function 類型的工具呼叫
@@ -2240,7 +2249,7 @@ ${fileList}`;
           name: func?.name || '',
           args_buffer: ''
         });
-        console.log('🆕 新工具呼叫:', func?.name);
+        if (DEBUG_TOOL_STREAM) console.log('🆕 新工具呼叫:', func?.name);
       }
       
       const toolCall = toolCalls.get(toolId);
@@ -2251,7 +2260,7 @@ ${fileList}`;
 
     stream.on('toolCallDone', async (toolCall) => {
       try {
-        console.log('✅ 工具呼叫完成:', JSON.stringify(toolCall));
+        if (DEBUG_TOOL_STREAM) console.log('✅ 工具呼叫完成:', JSON.stringify(toolCall));
         const { id, function: func, type } = toolCall;
         
         // 只處理 function 類型的工具呼叫，忽略 file_search

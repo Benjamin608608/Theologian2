@@ -2140,28 +2140,36 @@ async function processBibleCommentaryToolStream(bookEn, ref, translation, passag
     
     const userMessage = `請為以下經文生成多位神學家的註釋：
 
-經文：${bookEn} ${ref}
-${translation ? `版本：${translation}` : ''}
-${passageText ? `經文內容：\n${passageText}` : ''}
+經文位置：${bookEn} ${ref}
+${translation ? `聖經版本：${translation}` : ''}
+
+經文完整內容：
+${passageText || '（經文內容未提供）'}
 
 目標作者清單（必須全部覆蓋）：
 ${authorList}
 
-使用說明：
-1. 首先使用 file_search 工具檢索與「${bookEn} ${ref}」相關的內容
-2. 基於檢索結果和你對這些神學家的了解，為每位作者生成註釋
-3. 對每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
-4. author_id 必須使用上述清單中的確切 ID
-5. commentary 應該反映該作者的神學觀點（120-180字）
-6. citations 引用具體找到的檔案來源
-7. 最後呼叫 emit_sources({sources}) 列出所有來源
+檢索策略：
+1. 請分別使用多個搜索詞進行 file_search 檢索：
+   - "${bookEn} chapter ${ref.split(':')[0]}" （經卷章節）
+   - "${ref}" （完整引用）
+   - 經文中的關鍵詞組合
+   - "Genesis 6" 和 "sons of God" 和 "daughters of men"
+   - 各作者的姓名搭配經卷名
 
-重要提醒：
-- 即使某位作者對此特定經文沒有直接註釋，也要基於其整體神學思想提供解釋
-- 不允許遺漏任何作者
-- 請先檢索，再逐一生成每位作者的註釋
+2. 嘗試不同的搜索組合直到找到相關內容
+3. 如果多次檢索後仍無結果，請基於你對這些神學家的已知觀點提供註釋
 
-資料庫文件清單：
+註釋要求：
+- 對每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
+- author_id 必須使用上述清單中的確切 ID
+- commentary 應該反映該作者對此經文的神學解釋（120-180字）
+- citations 引用找到的具體檔案來源
+- 最後呼叫 emit_sources({sources}) 列出所有來源
+
+重要：不允許遺漏任何作者，每位都必須有註釋。
+
+可用資料庫文件：
 ${fileList}`;
 
     await openai.beta.threads.messages.create(thread.id, {

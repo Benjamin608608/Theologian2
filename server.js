@@ -2201,7 +2201,11 @@ ${fileList}`;
 
     await openai.beta.threads.messages.create(thread.id, {
       role: 'user',
-      content: userMessage
+      content: userMessage,
+      // 將目標向量庫直接附加到本次訊息，提升檢索命中率
+      attachments: [
+        { vector_store_id: actualVectorStoreId }
+      ]
     });
 
     // 創建串流 Run
@@ -2210,7 +2214,9 @@ ${fileList}`;
       assistant_id: assistant.id,
       tool_resources: {
         file_search: { vector_store_ids: [actualVectorStoreId] }
-      }
+      },
+      // 強制引導先使用 file_search 取得片段再產出工具回覆
+      instructions: '先用 file_search 檢索與經文最相關的片段，至少嘗試 4 組關鍵詞；之後才針對每位作者分別呼叫 emit_commentary，再彙總 emit_sources。'
     });
     console.log('📡 串流已建立，等待事件...');
 

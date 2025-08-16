@@ -2177,16 +2177,15 @@ ${passageText || '（經文內容未提供）'}
 目標作者清單（必須全部覆蓋）：
 ${authorList}
 
-檢索策略：
-1. 請分別使用多個搜索詞進行 file_search 檢索：
-   - "${bookEn} chapter ${ref.split(':')[0]}" （經卷章節）
-   - "${ref}" （完整引用）
-   - 經文中的關鍵詞組合
-   - "Genesis 6" 和 "sons of God" 和 "daughters of men"
-   - 各作者的姓名搭配經卷名
-
-2. 嘗試不同的搜索組合直到找到相關內容
-3. 如果多次檢索後仍無結果，請基於你對這些神學家的已知觀點提供註釋
+檢索策略（非常重要）：
+1) 先將上面經文中的核心名詞與重要詞彙翻譯成英文關鍵詞（例如 Genesis 6:4 → sons of God, daughters of men, Nephilim, mighty men）。
+2) 依序多輪使用 file_search，每輪使用不同關鍵詞組合，例如：
+   - 書卷+章："${bookEn} ${ref.split(':')[0]}"
+   - 節引用："${ref}"
+   - 英文關鍵詞組合：如 "sons of God", "daughters of men", "Nephilim", "mighty men"
+   - 作者名 + 書卷：如 "Calvin Genesis", "Matthew Henry Genesis"
+3) 每輪檢索若無結果則更換關鍵詞繼續檢索，至少嘗試 4 輪。
+4) 若最終仍無檢索結果，仍須基於該作者的已知神學立場給出簡潔註釋。
 
 註釋要求：
 - 對每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
@@ -3162,8 +3161,8 @@ app.get('/api/bible/vector-status', ensureAuthenticated, async (req, res) => {
 });
 
 // 列出 66 卷各自資料庫的檔案清單（支援 format=json|txt，預設 json）
-// 獲取經卷配置
-app.get('/api/bible/book-config/:bookEn', ensureAuthenticated, async (req, res) => {
+// 獲取經卷配置（公開，僅回傳靜態配置資料）
+app.get('/api/bible/book-config/:bookEn', async (req, res) => {
   try {
     const { bookEn } = req.params;
     const booksConfig = require('./config/bible-books-config.json');

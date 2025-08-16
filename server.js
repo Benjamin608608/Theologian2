@@ -2108,27 +2108,57 @@ async function processBibleExplainRequest(question, targetVectorStoreId, user, l
 // 新版本：基於工具呼叫的聖經註釋串流處理
 async function processBibleCommentaryToolStream(bookEn, ref, translation, passageText, targetVectorStoreId, user, language, res) {
   try {
+    // 載入聖經經卷配置
+    const booksConfig = require('./config/bible-books-config.json');
+    const bookConfig = booksConfig[bookEn];
+    
+    if (!bookConfig) {
+      throw new Error(`未找到 ${bookEn} 的配置`);
+    }
+    
     // 建立工具 Assistant（使用目標經卷的向量資料庫）
     const assistant = await getOrCreateBibleCommentaryAssistant(targetVectorStoreId);
     const thread = await openai.beta.threads.create();
 
-    // 構建用戶訊息（讓 AI 直接從向量資料庫中檢索）
+    // 從配置中提取作者清單和文件清單
+    const availableAuthors = bookConfig.authors.map(a => ({
+      id: a.id,
+      name: a.name,
+      fullName: a.fullName
+    }));
+    
+    const availableFiles = bookConfig.files;
+    
+    console.log(`📖 ${bookEn} 資料庫配置:`);
+    console.log(`   - 作者數: ${availableAuthors.length}`);
+    console.log(`   - 文件數: ${availableFiles.length}`);
+    console.log(`   - 作者清單: ${availableAuthors.map(a => a.id).join(', ')}`);
+
+    // 構建強制要求所有作者的用戶訊息
+    const authorList = availableAuthors.map(a => `${a.id} (${a.name})`).join(', ');
+    const fileList = availableFiles.map((f, i) => `${i+1}. ${f}`).join('\n');
+    
     const userMessage = `請為以下經文生成多位神學家的註釋：
 
 經文：${bookEn} ${ref}
 ${translation ? `版本：${translation}` : ''}
 ${passageText ? `經文內容：\n${passageText}` : ''}
 
-請使用 file_search 從 ${bookEn} 卷的註釋資料庫中檢索相關內容，然後：
+資料庫中的作者清單（必須全部覆蓋）：
+${authorList}
 
-1. 對找到的每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
-2. author_id 使用以下格式之一：calvin, luther, augustine, chrysostom, aquinas, wesley, spurgeon, henry, clarke, gill
-3. 如果資料庫中的作者不在上述清單中，請選擇最接近的 ID 或使用 "other"
-4. citations 引用具體的檔案來源
+資料庫中的文件清單：
+${fileList}
+
+強制要求：
+1. 必須對每位作者分別呼叫 emit_commentary({author_id, commentary, citations})
+2. 即使某位作者對此特定經文沒有直接註釋，也要基於其神學觀點提供相關解釋
+3. author_id 必須使用上述清單中的確切 ID
+4. citations 引用具體的檔案名稱
 5. 最後呼叫 emit_sources({sources}) 列出所有使用的來源
 6. 每位作者的 commentary 應該在 120-180 字之間
 
-重要：請確保從 ${bookEn} 卷的資料庫中檢索，並只針對 ${ref} 這個特定經文生成註釋。`;
+重要：不允許遺漏任何作者，必須為每位作者提供註釋，即使內容較為簡短。`;
 
     await openai.beta.threads.messages.create(thread.id, {
       role: 'user',
@@ -2148,6 +2178,8 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
     // 工具呼叫累積器
     const toolCalls = new Map(); // tool_call_id -> { name, args_buffer }
     let sourcesReceived = false;
+    const receivedAuthors = new Set(); // 追蹤已收到的作者
+    const expectedAuthors = new Set(availableAuthors.map(a => a.id)); // 預期的作者清單
 
     // 處理串流事件
     stream.on('toolCallDelta', (toolCallDelta) => {
@@ -2192,8 +2224,13 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
         
         if (func.name === 'emit_commentary') {
           console.log('📖 處理 emit_commentary:', args.author_id);
-          // 獲取顯示名稱
-          const displayName = COMMENTARY_AUTHORS[args.author_id] || args.author_id;
+          
+          // 記錄已收到的作者
+          receivedAuthors.add(args.author_id);
+          
+          // 從配置中獲取作者資訊
+          const authorConfig = availableAuthors.find(a => a.id === args.author_id);
+          const displayName = authorConfig ? `${authorConfig.name} ${authorConfig.fullName.match(/\(([^)]+)\)/)?.[1] || ''}`.trim() : args.author_id;
           
           // 發送作者註釋事件
           const authorEvent = {
@@ -2209,10 +2246,36 @@ ${passageText ? `經文內容：\n${passageText}` : ''}
         } else if (func.name === 'emit_sources' && !sourcesReceived) {
           sourcesReceived = true;
           
+          // 檢查作者覆蓋率
+          const missingAuthors = [...expectedAuthors].filter(id => !receivedAuthors.has(id));
+          const coverageRate = (receivedAuthors.size / expectedAuthors.size * 100).toFixed(1);
+          
+          console.log(`📊 作者覆蓋率: ${receivedAuthors.size}/${expectedAuthors.size} (${coverageRate}%)`);
+          if (missingAuthors.length > 0) {
+            console.log(`⚠️ 缺失作者: ${missingAuthors.join(', ')}`);
+          }
+          
+          // 添加資料庫文件清單到來源
+          const enhancedSources = [
+            ...(args.sources || []),
+            {
+              id: 'database_files',
+              title: `${bookEn} 資料庫完整文件清單`,
+              loc: `共 ${availableFiles.length} 個文件`,
+              files: availableFiles
+            }
+          ];
+          
           // 發送來源事件
           const sourcesEvent = {
             type: 'sources',
-            items: args.sources || []
+            items: enhancedSources,
+            coverage: {
+              received: receivedAuthors.size,
+              expected: expectedAuthors.size,
+              rate: coverageRate,
+              missing: missingAuthors
+            }
           };
           
           res.write(`data: ${JSON.stringify(sourcesEvent)}\n\n`);

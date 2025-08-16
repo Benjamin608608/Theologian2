@@ -1,0 +1,3530 @@
+{
+  "Genesis": {
+    "order": 1,
+    "storeName": "Bible-Genesis",
+    "storeId": "vs_6896144118bc8191b98c15febfaa94fd",
+    "fileCount": 7,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)",
+      "[William M. Groom] Genesis to Revelation Bible Course.txt (918732 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Genesis - Volume 1.txt (1524783 bytes)",
+      "[Herbert Carl Leupold (1892-1972)] Exposition of Genesis_ Volumes 1 and 2.txt (2781809 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Genesis - Volume 2.txt (1353310 bytes)",
+      "[Marcus Dods (1834-1909)] Expositor_s Bible_ The Book of Genesis.txt (827854 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)"
+        ]
+      },
+      {
+        "id": "groom",
+        "name": "William M. Groom",
+        "fullName": "William M. Groom",
+        "dates": "",
+        "files": [
+          "[William M. Groom] Genesis to Revelation Bible Course.txt (918732 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Genesis - Volume 1.txt (1524783 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Genesis - Volume 2.txt (1353310 bytes)"
+        ]
+      },
+      {
+        "id": "leupold",
+        "name": "Herbert Carl Leupold",
+        "fullName": "Herbert Carl Leupold (1892-1972)",
+        "dates": "1892-1972",
+        "files": [
+          "[Herbert Carl Leupold (1892-1972)] Exposition of Genesis_ Volumes 1 and 2.txt (2781809 bytes)"
+        ]
+      },
+      {
+        "id": "dods",
+        "name": "Marcus Dods",
+        "fullName": "Marcus Dods (1834-1909)",
+        "dates": "1834-1909",
+        "files": [
+          "[Marcus Dods (1834-1909)] Expositor_s Bible_ The Book of Genesis.txt (827854 bytes)"
+        ]
+      }
+    ]
+  },
+  "Exodus": {
+    "order": 2,
+    "storeName": "Bible-Exodus",
+    "storeId": "vs_6896146697b48191b0b57c18c6701c02",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)",
+      "[George Alexander Chadwick (1840-1923)] Expositor_s Bible_ The Book of Exodus.txt (875542 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)",
+      "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Exodus-Ruth.txt (50589 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)"
+        ]
+      },
+      {
+        "id": "chadwick",
+        "name": "George Alexander Chadwick",
+        "fullName": "George Alexander Chadwick (1840-1923)",
+        "dates": "1840-1923",
+        "files": [
+          "[George Alexander Chadwick (1840-1923)] Expositor_s Bible_ The Book of Exodus.txt (875542 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)"
+        ]
+      },
+      {
+        "id": "cook",
+        "name": "Frederick Charles Cook",
+        "fullName": "Frederick Charles Cook (1810-1889)",
+        "dates": "1810-1889",
+        "files": [
+          "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Exodus-Ruth.txt (50589 bytes)"
+        ]
+      }
+    ]
+  },
+  "Leviticus": {
+    "order": 3,
+    "storeName": "Bible-Leviticus",
+    "storeId": "vs_689614761bec8191a8bde73f64635b7c",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)",
+      "[S. H. Kellogg (1839-1899)] Expositor_s Bible_ The Book of Leviticus.txt (1146809 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)"
+        ]
+      },
+      {
+        "id": "kellogg",
+        "name": "S. H. Kellogg",
+        "fullName": "S. H. Kellogg (1839-1899)",
+        "dates": "1839-1899",
+        "files": [
+          "[S. H. Kellogg (1839-1899)] Expositor_s Bible_ The Book of Leviticus.txt (1146809 bytes)"
+        ]
+      }
+    ]
+  },
+  "Numbers": {
+    "order": 4,
+    "storeName": "Bible-Numbers",
+    "storeId": "vs_689614e2db9c8191a70745d53d81786e",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)",
+      "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ The Book of Numbers.txt (814141 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Genesis, Exodus, Leviticus and Numbers.txt (1380043 bytes)"
+        ]
+      },
+      {
+        "id": "watson",
+        "name": "Robert Alexander Watson",
+        "fullName": "Robert Alexander Watson (1845-1921)",
+        "dates": "1845-1921",
+        "files": [
+          "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ The Book of Numbers.txt (814141 bytes)"
+        ]
+      }
+    ]
+  },
+  "Deuteronomy": {
+    "order": 5,
+    "storeName": "Bible-Deuteronomy",
+    "storeId": "vs_689614f30a0881918b73948edd4727c3",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)",
+      "[Andrew Harper (1844-1936)] Expositor_s Bible_ The Book of Deuteronomy.txt (1007615 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume I (Genesis to Deuteronomy).txt (6260534 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+        ]
+      },
+      {
+        "id": "harper",
+        "name": "Andrew Harper",
+        "fullName": "Andrew Harper (1844-1936)",
+        "dates": "1844-1936",
+        "files": [
+          "[Andrew Harper (1844-1936)] Expositor_s Bible_ The Book of Deuteronomy.txt (1007615 bytes)"
+        ]
+      }
+    ]
+  },
+  "Joshua": {
+    "order": 6,
+    "storeName": "Bible-Joshua",
+    "storeId": "vs_6896150f49a4819182985a5d51d71e59",
+    "fileCount": 5,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Joshua.txt (912894 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)",
+      "[Anonymous (14th c. English)] Book of Jasher Referred to in Joshua and Second Samuel.txt (955824 bytes)",
+      "[W. G. Blaikie (1820-1899)] Expositor_s Bible_ The Book of Joshua.txt (781586 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Joshua.txt (912894 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+        ]
+      },
+      {
+        "id": "anonymous",
+        "name": "Anonymous",
+        "fullName": "Anonymous (14th c. English)",
+        "dates": "14th c. English",
+        "files": [
+          "[Anonymous (14th c. English)] Book of Jasher Referred to in Joshua and Second Samuel.txt (955824 bytes)"
+        ]
+      },
+      {
+        "id": "blaikie",
+        "name": "W. G. Blaikie",
+        "fullName": "W. G. Blaikie (1820-1899)",
+        "dates": "1820-1899",
+        "files": [
+          "[W. G. Blaikie (1820-1899)] Expositor_s Bible_ The Book of Joshua.txt (781586 bytes)"
+        ]
+      }
+    ]
+  },
+  "Judges": {
+    "order": 7,
+    "storeName": "Bible-Judges",
+    "storeId": "vs_6896153124288191b9333b58ac02d0be",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ Judges and Ruth.txt (819070 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "watson",
+        "name": "Robert Alexander Watson",
+        "fullName": "Robert Alexander Watson (1845-1921)",
+        "dates": "1845-1921",
+        "files": [
+          "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ Judges and Ruth.txt (819070 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+        ]
+      }
+    ]
+  },
+  "Ruth": {
+    "order": 8,
+    "storeName": "Bible-Ruth",
+    "storeId": "vs_689615c38974819199a009a5d00ddf9c",
+    "fileCount": 5,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)",
+      "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Exodus-Ruth.txt (50589 bytes)",
+      "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ Judges and Ruth.txt (819070 bytes)",
+      "[Ruth Ellis Messenger] Christian Hymns of the First Three Centuries.txt (73606 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+        ]
+      },
+      {
+        "id": "cook",
+        "name": "Frederick Charles Cook",
+        "fullName": "Frederick Charles Cook (1810-1889)",
+        "dates": "1810-1889",
+        "files": [
+          "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Exodus-Ruth.txt (50589 bytes)"
+        ]
+      },
+      {
+        "id": "watson",
+        "name": "Robert Alexander Watson",
+        "fullName": "Robert Alexander Watson (1845-1921)",
+        "dates": "1845-1921",
+        "files": [
+          "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ Judges and Ruth.txt (819070 bytes)"
+        ]
+      },
+      {
+        "id": "messenger",
+        "name": "Ruth Ellis Messenger",
+        "fullName": "Ruth Ellis Messenger",
+        "dates": "",
+        "files": [
+          "[Ruth Ellis Messenger] Christian Hymns of the First Three Centuries.txt (73606 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Samuel": {
+    "order": 9,
+    "storeName": "Bible-1 Samuel",
+    "storeId": "vs_689615d30de08191bc4e5ddc9fb43cd3",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Frederick Charles Cook (1810-1889)] Bible Commentary_ I Samuel-Esther.txt (48071 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "cook",
+        "name": "Frederick Charles Cook",
+        "fullName": "Frederick Charles Cook (1810-1889)",
+        "dates": "1810-1889",
+        "files": [
+          "[Frederick Charles Cook (1810-1889)] Bible Commentary_ I Samuel-Esther.txt (48071 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Samuel": {
+    "order": 10,
+    "storeName": "Bible-2 Samuel",
+    "storeId": "vs_689615daf2cc8191930e37d8bc270cec",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Anonymous (14th c. English)] Book of Jasher Referred to in Joshua and Second Samuel.txt (955824 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "anonymous",
+        "name": "Anonymous",
+        "fullName": "Anonymous (14th c. English)",
+        "dates": "14th c. English",
+        "files": [
+          "[Anonymous (14th c. English)] Book of Jasher Referred to in Joshua and Second Samuel.txt (955824 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Kings": {
+    "order": 11,
+    "storeName": "Bible-1 Kings",
+    "storeId": "vs_689615ea79b08191a70a1d29c5678420",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Kings": {
+    "order": 12,
+    "storeName": "Bible-2 Kings",
+    "storeId": "vs_689615f55ae48191bd929b3f22c58e92",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Deuteronomy, Joshua, Judges, Ruth and First Book of Samuel, Second Samuel, First Kings, and Second Kings Chapters.txt (1597999 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Chronicles": {
+    "order": 13,
+    "storeName": "Bible-1 Chronicles",
+    "storeId": "vs_68962bddc39481918e285314d3457bf2",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Chronicles": {
+    "order": 14,
+    "storeName": "Bible-2 Chronicles",
+    "storeId": "vs_68962bde33848191bc2023ef3d1572c0",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "Ezra": {
+    "order": 15,
+    "storeName": "Bible-Ezra",
+    "storeId": "vs_6896160b213c81919183b65b16c2183a",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)",
+      "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ Ezra, Nehemiah, and Esther.txt (744726 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      },
+      {
+        "id": "adeney",
+        "name": "Walter Frederic Adeney",
+        "fullName": "Walter Frederic Adeney (1849-1920)",
+        "dates": "1849-1920",
+        "files": [
+          "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ Ezra, Nehemiah, and Esther.txt (744726 bytes)"
+        ]
+      }
+    ]
+  },
+  "Nehemiah": {
+    "order": 16,
+    "storeName": "Bible-Nehemiah",
+    "storeId": "vs_6896161d17108191a91c14c4ee66101d",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)",
+      "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ Ezra, Nehemiah, and Esther.txt (744726 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      },
+      {
+        "id": "adeney",
+        "name": "Walter Frederic Adeney",
+        "fullName": "Walter Frederic Adeney (1849-1920)",
+        "dates": "1849-1920",
+        "files": [
+          "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ Ezra, Nehemiah, and Esther.txt (744726 bytes)"
+        ]
+      }
+    ]
+  },
+  "Esther": {
+    "order": 17,
+    "storeName": "Bible-Esther",
+    "storeId": "vs_68961629ebc48191a7846eaa3dd63eff",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)",
+      "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ Ezra, Nehemiah, and Esther.txt (744726 bytes)",
+      "[Frederick Charles Cook (1810-1889)] Bible Commentary_ I Samuel-Esther.txt (48071 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume II (Joshua to Esther).txt (7814979 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      },
+      {
+        "id": "adeney",
+        "name": "Walter Frederic Adeney",
+        "fullName": "Walter Frederic Adeney (1849-1920)",
+        "dates": "1849-1920",
+        "files": [
+          "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ Ezra, Nehemiah, and Esther.txt (744726 bytes)"
+        ]
+      },
+      {
+        "id": "cook",
+        "name": "Frederick Charles Cook",
+        "fullName": "Frederick Charles Cook (1810-1889)",
+        "dates": "1810-1889",
+        "files": [
+          "[Frederick Charles Cook (1810-1889)] Bible Commentary_ I Samuel-Esther.txt (48071 bytes)"
+        ]
+      }
+    ]
+  },
+  "Job": {
+    "order": 18,
+    "storeName": "Bible-Job",
+    "storeId": "vs_6896164c97e08191a6d1078e5b9ff5de",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)",
+      "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ The Book of Job.txt (752340 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Job Vol. 1.txt (40604 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      },
+      {
+        "id": "watson",
+        "name": "Robert Alexander Watson",
+        "fullName": "Robert Alexander Watson (1845-1921)",
+        "dates": "1845-1921",
+        "files": [
+          "[Robert Alexander Watson (1845-1921)] Expositor_s Bible_ The Book of Job.txt (752340 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Job Vol. 1.txt (40604 bytes)"
+        ]
+      }
+    ]
+  },
+  "Psalms": {
+    "order": 19,
+    "storeName": "Bible-Psalms",
+    "storeId": "vs_689616a0a5f08191966ed6177c9c4345",
+    "fileCount": 18,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-08. St. Augustine_ Exposition on the Book of Psalms.txt (5029701 bytes)",
+      "[John McLeod Campbell (1800-1872)] Christian Hymn Book_ A Compilation of Psalms, Hymns and Spiritual Songs, Original and Selected_ Revised and Expanded.txt (1605764 bytes)",
+      "[John Owen (1616-1683)] Practical Exposition upon Psalm CXXX.txt (1108308 bytes)",
+      "[Louis Fitzgerald Benson] John Calvin and the Psalmody of the Reformed Churches.txt (157229 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Psalms - Volume 5.txt (1251952 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Psalms - Volume 2.txt (1387178 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Psalms - Volume 4.txt (1446784 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Psalms - Volume 3.txt (1506026 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Psalms - Volume 1.txt (1757144 bytes)",
+      "[Isaac Watts (1674-1748)] Psalms and Hymns of Isaac Watts.txt (1534188 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ The Psalms, Volume I.txt (720845 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ The Psalms, Volume II.txt (928054 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ The Psalms, Volume III.txt (819568 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Psalms.txt (1425613 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Psalms Vol. 2.txt (45884 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Psalms Vol. 3.txt (41716 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Psalms Vol. 1.txt (54489 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-08. St. Augustine_ Exposition on the Book of Psalms.txt (5029701 bytes)"
+        ]
+      },
+      {
+        "id": "campbell",
+        "name": "John McLeod Campbell",
+        "fullName": "John McLeod Campbell (1800-1872)",
+        "dates": "1800-1872",
+        "files": [
+          "[John McLeod Campbell (1800-1872)] Christian Hymn Book_ A Compilation of Psalms, Hymns and Spiritual Songs, Original and Selected_ Revised and Expanded.txt (1605764 bytes)"
+        ]
+      },
+      {
+        "id": "owen",
+        "name": "John Owen",
+        "fullName": "John Owen (1616-1683)",
+        "dates": "1616-1683",
+        "files": [
+          "[John Owen (1616-1683)] Practical Exposition upon Psalm CXXX.txt (1108308 bytes)"
+        ]
+      },
+      {
+        "id": "benson",
+        "name": "Louis Fitzgerald Benson",
+        "fullName": "Louis Fitzgerald Benson",
+        "dates": "",
+        "files": [
+          "[Louis Fitzgerald Benson] John Calvin and the Psalmody of the Reformed Churches.txt (157229 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Psalms - Volume 5.txt (1251952 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Psalms - Volume 2.txt (1387178 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Psalms - Volume 4.txt (1446784 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Psalms - Volume 3.txt (1506026 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Psalms - Volume 1.txt (1757144 bytes)"
+        ]
+      },
+      {
+        "id": "watts",
+        "name": "Isaac Watts",
+        "fullName": "Isaac Watts (1674-1748)",
+        "dates": "1674-1748",
+        "files": [
+          "[Isaac Watts (1674-1748)] Psalms and Hymns of Isaac Watts.txt (1534188 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ The Psalms, Volume I.txt (720845 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ The Psalms, Volume II.txt (928054 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ The Psalms, Volume III.txt (819568 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Psalms.txt (1425613 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Psalms Vol. 2.txt (45884 bytes)",
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Psalms Vol. 3.txt (41716 bytes)",
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Psalms Vol. 1.txt (54489 bytes)"
+        ]
+      }
+    ]
+  },
+  "Proverbs": {
+    "order": 20,
+    "storeName": "Bible-Proverbs",
+    "storeId": "vs_6896173167e48191b303a9a0751968ba",
+    "fileCount": 6,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)",
+      "[Charles Haddon Spurgeon (1834-1892)] Sermons on Proverbs.txt (1610771 bytes)",
+      "[Robert Forman Horton (1855-1934)] Expositor_s Bible_ The Book of Proverbs.txt (864287 bytes)",
+      "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Proverbs-Ezekiel.txt (57224 bytes)",
+      "[John Henry Newman (1801-1890)] Newman_s Apologia Pro Vita Sua.txt (59922 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      },
+      {
+        "id": "spurgeon",
+        "name": "Charles Haddon Spurgeon",
+        "fullName": "Charles Haddon Spurgeon (1834-1892)",
+        "dates": "1834-1892",
+        "files": [
+          "[Charles Haddon Spurgeon (1834-1892)] Sermons on Proverbs.txt (1610771 bytes)"
+        ]
+      },
+      {
+        "id": "horton",
+        "name": "Robert Forman Horton",
+        "fullName": "Robert Forman Horton (1855-1934)",
+        "dates": "1855-1934",
+        "files": [
+          "[Robert Forman Horton (1855-1934)] Expositor_s Bible_ The Book of Proverbs.txt (864287 bytes)"
+        ]
+      },
+      {
+        "id": "cook",
+        "name": "Frederick Charles Cook",
+        "fullName": "Frederick Charles Cook (1810-1889)",
+        "dates": "1810-1889",
+        "files": [
+          "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Proverbs-Ezekiel.txt (57224 bytes)"
+        ]
+      },
+      {
+        "id": "newman",
+        "name": "John Henry Newman",
+        "fullName": "John Henry Newman (1801-1890)",
+        "dates": "1801-1890",
+        "files": [
+          "[John Henry Newman (1801-1890)] Newman_s Apologia Pro Vita Sua.txt (59922 bytes)"
+        ]
+      }
+    ]
+  },
+  "Ecclesiastes": {
+    "order": 21,
+    "storeName": "Bible-Ecclesiastes",
+    "storeId": "vs_68961741942c8191bdd70ccf410a7ec8",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)",
+      "[Frances Elizabeth Cox] Expositor_s Bible_ The Book of Ecclesiastes.txt (505559 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of the Holy Scriptures_ Second Kings from Chap. VIII, and Chronicles, Ezra, and Nehemiah, Esther, Job, Proverbs and Ecclesiastes.txt (1578286 bytes)"
+        ]
+      },
+      {
+        "id": "cox",
+        "name": "Frances Elizabeth Cox",
+        "fullName": "Frances Elizabeth Cox",
+        "dates": "",
+        "files": [
+          "[Frances Elizabeth Cox] Expositor_s Bible_ The Book of Ecclesiastes.txt (505559 bytes)"
+        ]
+      }
+    ]
+  },
+  "Song of Songs": {
+    "order": 22,
+    "storeName": "Bible-Song of Songs",
+    "storeId": "vs_68961752198481918597f1d915ccc4d1",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)",
+      "[Madame Jeanne Marie Bouvier de la Mothe Guyon (1647-1717)] Song of Songs of Solomon _ Explanations and Reflections having Reference to the Interior Life.txt (330390 bytes)",
+      "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ The Song of Solomon and the Lamentations of Jeremiah.txt (626708 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume III (Job to Song of Solomon).txt (8075463 bytes)"
+        ]
+      },
+      {
+        "id": "guyon",
+        "name": "Madame Jeanne Marie Bouvier de la Mothe Guyon",
+        "fullName": "Madame Jeanne Marie Bouvier de la Mothe Guyon (1647-1717)",
+        "dates": "1647-1717",
+        "files": [
+          "[Madame Jeanne Marie Bouvier de la Mothe Guyon (1647-1717)] Song of Songs of Solomon _ Explanations and Reflections having Reference to the Interior Life.txt (330390 bytes)"
+        ]
+      },
+      {
+        "id": "adeney",
+        "name": "Walter Frederic Adeney",
+        "fullName": "Walter Frederic Adeney (1849-1920)",
+        "dates": "1849-1920",
+        "files": [
+          "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ The Song of Solomon and the Lamentations of Jeremiah.txt (626708 bytes)"
+        ]
+      }
+    ]
+  },
+  "Isaiah": {
+    "order": 23,
+    "storeName": "Bible-Isaiah",
+    "storeId": "vs_689617edccfc81918a3e9afc02f68cdd",
+    "fileCount": 10,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 4.txt (1258594 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 2.txt (1288638 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 3.txt (1398563 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Isaiah and Jeremiah.txt (1390262 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Isaiah Vol. 2.txt (45875 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 1.txt (1652919 bytes)",
+      "[George Adam Smith (1856-1942)] Expositor_s Bible_ The Book of Isaiah, Volume I.txt (881145 bytes)",
+      "[George Adam Smith (1856-1942)] Expositor_s Bible_ The Book of Isaiah, Volume II.txt (946125 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Isaiah Volume I.txt (57183 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 4.txt (1258594 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 2.txt (1288638 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 3.txt (1398563 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Isaiah - Volume 1.txt (1652919 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Isaiah and Jeremiah.txt (1390262 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Isaiah Vol. 2.txt (45875 bytes)",
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Isaiah Volume I.txt (57183 bytes)"
+        ]
+      },
+      {
+        "id": "smith",
+        "name": "George Adam Smith",
+        "fullName": "George Adam Smith (1856-1942)",
+        "dates": "1856-1942",
+        "files": [
+          "[George Adam Smith (1856-1942)] Expositor_s Bible_ The Book of Isaiah, Volume I.txt (881145 bytes)",
+          "[George Adam Smith (1856-1942)] Expositor_s Bible_ The Book of Isaiah, Volume II.txt (946125 bytes)"
+        ]
+      }
+    ]
+  },
+  "Jeremiah": {
+    "order": 24,
+    "storeName": "Bible-Jeremiah",
+    "storeId": "vs_6896189c026881918ac37137a30389be",
+    "fileCount": 12,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[William H. Bennett (1855-1920)] Expositor_s Bible_ The Book of Jeremiah, Volume II.txt (688477 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 5.txt (1499862 bytes)",
+      "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ The Song of Solomon and the Lamentations of Jeremiah.txt (626708 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 4.txt (1734379 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 3.txt (1321328 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 1.txt (1483665 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Isaiah and Jeremiah.txt (1390262 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 2.txt (1286046 bytes)",
+      "[Charles James Ball (1851-1924)] Expositor_s Bible_ The Prophecies of Jeremiah, Volume I.txt (808023 bytes)",
+      "[Jeremiah Bascom Reeves] Hymn as Literature.txt (586017 bytes)",
+      "[George Adam Smith (1856-1942)] Jeremiah_ Being the Baird Lecture for 1922.txt (581791 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "bennett",
+        "name": "William H. Bennett",
+        "fullName": "William H. Bennett (1855-1920)",
+        "dates": "1855-1920",
+        "files": [
+          "[William H. Bennett (1855-1920)] Expositor_s Bible_ The Book of Jeremiah, Volume II.txt (688477 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 5.txt (1499862 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 4.txt (1734379 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 3.txt (1321328 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 1.txt (1483665 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 2.txt (1286046 bytes)"
+        ]
+      },
+      {
+        "id": "adeney",
+        "name": "Walter Frederic Adeney",
+        "fullName": "Walter Frederic Adeney (1849-1920)",
+        "dates": "1849-1920",
+        "files": [
+          "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ The Song of Solomon and the Lamentations of Jeremiah.txt (626708 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Isaiah and Jeremiah.txt (1390262 bytes)"
+        ]
+      },
+      {
+        "id": "ball",
+        "name": "Charles James Ball",
+        "fullName": "Charles James Ball (1851-1924)",
+        "dates": "1851-1924",
+        "files": [
+          "[Charles James Ball (1851-1924)] Expositor_s Bible_ The Prophecies of Jeremiah, Volume I.txt (808023 bytes)"
+        ]
+      },
+      {
+        "id": "reeves",
+        "name": "Jeremiah Bascom Reeves",
+        "fullName": "Jeremiah Bascom Reeves",
+        "dates": "",
+        "files": [
+          "[Jeremiah Bascom Reeves] Hymn as Literature.txt (586017 bytes)"
+        ]
+      },
+      {
+        "id": "smith",
+        "name": "George Adam Smith",
+        "fullName": "George Adam Smith (1856-1942)",
+        "dates": "1856-1942",
+        "files": [
+          "[George Adam Smith (1856-1942)] Jeremiah_ Being the Baird Lecture for 1922.txt (581791 bytes)"
+        ]
+      }
+    ]
+  },
+  "Lamentations": {
+    "order": 25,
+    "storeName": "Bible-Lamentations",
+    "storeId": "vs_689618bdbc9c8191b71e1c91b00f26a8",
+    "fileCount": 7,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 1.txt (1483665 bytes)",
+      "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ The Song of Solomon and the Lamentations of Jeremiah.txt (626708 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 4.txt (1734379 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 5.txt (1499862 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 2.txt (1286046 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 3.txt (1321328 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 1.txt (1483665 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 4.txt (1734379 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 5.txt (1499862 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 2.txt (1286046 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Jeremiah and Lamentations - Volume 3.txt (1321328 bytes)"
+        ]
+      },
+      {
+        "id": "adeney",
+        "name": "Walter Frederic Adeney",
+        "fullName": "Walter Frederic Adeney (1849-1920)",
+        "dates": "1849-1920",
+        "files": [
+          "[Walter Frederic Adeney (1849-1920)] Expositor_s Bible_ The Song of Solomon and the Lamentations of Jeremiah.txt (626708 bytes)"
+        ]
+      }
+    ]
+  },
+  "Ezekiel": {
+    "order": 26,
+    "storeName": "Bible-Ezekiel",
+    "storeId": "vs_6896195741408191a82e0d846e9321fe",
+    "fileCount": 6,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Ezekiel, Daniel and the Minor Prophets_ and Matthew Chaps. I to VIII.txt (1518058 bytes)",
+      "[John J. Skinner (_-1925)] Expositor_s Bible_ The Book of Ezekiel.txt (997744 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Ezekiel - Volume 2.txt (1235935 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Ezekiel - Volume 1.txt (1072409 bytes)",
+      "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Proverbs-Ezekiel.txt (57224 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Ezekiel, Daniel and the Minor Prophets_ and Matthew Chaps. I to VIII.txt (1518058 bytes)"
+        ]
+      },
+      {
+        "id": "skinner",
+        "name": "John J. Skinner",
+        "fullName": "John J. Skinner (_-1925)",
+        "dates": "_-1925",
+        "files": [
+          "[John J. Skinner (_-1925)] Expositor_s Bible_ The Book of Ezekiel.txt (997744 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Ezekiel - Volume 2.txt (1235935 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Ezekiel - Volume 1.txt (1072409 bytes)"
+        ]
+      },
+      {
+        "id": "cook",
+        "name": "Frederick Charles Cook",
+        "fullName": "Frederick Charles Cook (1810-1889)",
+        "dates": "1810-1889",
+        "files": [
+          "[Frederick Charles Cook (1810-1889)] Bible Commentary_ Proverbs-Ezekiel.txt (57224 bytes)"
+        ]
+      }
+    ]
+  },
+  "Daniel": {
+    "order": 27,
+    "storeName": "Bible-Daniel",
+    "storeId": "vs_68961966fa448191b819cc050a725dc7",
+    "fileCount": 10,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Daniel - Volume 2.txt (1246970 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Daniel - Volume 1.txt (1191482 bytes)",
+      "[William Heaford Daubney] Three Additions to Daniel_ A Study..txt (501217 bytes)",
+      "[Frederic William Farrar (1831-1903)] Expositor_s Bible_ The Book of Daniel.txt (741786 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Daniel Vol. 1.txt (34170 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Ezekiel, Daniel and the Minor Prophets_ and Matthew Chaps. I to VIII.txt (1518058 bytes)",
+      "[Daniel Defoe (1660-1731)] Robinson Crusoe.txt (653341 bytes)",
+      "[Daniel Steele (1824-1914)] Love Enthroned.txt (480034 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Daniel vol. 2.txt (31783 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Daniel - Volume 2.txt (1246970 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Daniel - Volume 1.txt (1191482 bytes)"
+        ]
+      },
+      {
+        "id": "daubney",
+        "name": "William Heaford Daubney",
+        "fullName": "William Heaford Daubney",
+        "dates": "",
+        "files": [
+          "[William Heaford Daubney] Three Additions to Daniel_ A Study..txt (501217 bytes)"
+        ]
+      },
+      {
+        "id": "farrar",
+        "name": "Frederic William Farrar",
+        "fullName": "Frederic William Farrar (1831-1903)",
+        "dates": "1831-1903",
+        "files": [
+          "[Frederic William Farrar (1831-1903)] Expositor_s Bible_ The Book of Daniel.txt (741786 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Daniel Vol. 1.txt (34170 bytes)",
+          "[Albert Barnes (1798-1870)] Notes on the Old Testament Explanatory and Practical_ Daniel vol. 2.txt (31783 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Ezekiel, Daniel and the Minor Prophets_ and Matthew Chaps. I to VIII.txt (1518058 bytes)"
+        ]
+      },
+      {
+        "id": "defoe",
+        "name": "Daniel Defoe",
+        "fullName": "Daniel Defoe (1660-1731)",
+        "dates": "1660-1731",
+        "files": [
+          "[Daniel Defoe (1660-1731)] Robinson Crusoe.txt (653341 bytes)"
+        ]
+      },
+      {
+        "id": "steele",
+        "name": "Daniel Steele",
+        "fullName": "Daniel Steele (1824-1914)",
+        "dates": "1824-1914",
+        "files": [
+          "[Daniel Steele (1824-1914)] Love Enthroned.txt (480034 bytes)"
+        ]
+      }
+    ]
+  },
+  "Hosea": {
+    "order": 28,
+    "storeName": "Bible-Hosea",
+    "storeId": "vs_689619fa3dd48191b3c90476846522dc",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Hosea.txt (1319134 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Hosea.txt (1319134 bytes)"
+        ]
+      }
+    ]
+  },
+  "Joel": {
+    "order": 29,
+    "storeName": "Bible-Joel",
+    "storeId": "vs_68961a106d48819192e852d1e1a6e315",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Joel, Amos, Obadiah.txt (1257641 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Joel, Amos, Obadiah.txt (1257641 bytes)"
+        ]
+      }
+    ]
+  },
+  "Amos": {
+    "order": 30,
+    "storeName": "Bible-Amos",
+    "storeId": "vs_68961a2512a08191a0f468b850570337",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Joel, Amos, Obadiah.txt (1257641 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Joel, Amos, Obadiah.txt (1257641 bytes)"
+        ]
+      }
+    ]
+  },
+  "Obadiah": {
+    "order": 31,
+    "storeName": "Bible-Obadiah",
+    "storeId": "vs_68961a3f5c20819198db832c49fd3151",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Joel, Amos, Obadiah.txt (1257641 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Joel, Amos, Obadiah.txt (1257641 bytes)"
+        ]
+      }
+    ]
+  },
+  "Jonah": {
+    "order": 32,
+    "storeName": "Bible-Jonah",
+    "storeId": "vs_68961b6a1ca08191943bba757d94f7fb",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jonah, Micah, Nahum.txt (1414043 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Jonah, Micah, Nahum.txt (1414043 bytes)"
+        ]
+      }
+    ]
+  },
+  "Micah": {
+    "order": 33,
+    "storeName": "Bible-Micah",
+    "storeId": "vs_68961bfbc0ec81918f949b480acf8d76",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jonah, Micah, Nahum.txt (1414043 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Jonah, Micah, Nahum.txt (1414043 bytes)"
+        ]
+      }
+    ]
+  },
+  "Nahum": {
+    "order": 34,
+    "storeName": "Bible-Nahum",
+    "storeId": "vs_68961c0a9e7081919be97b7f7813849c",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Jonah, Micah, Nahum.txt (1414043 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Jonah, Micah, Nahum.txt (1414043 bytes)"
+        ]
+      }
+    ]
+  },
+  "Habakkuk": {
+    "order": 35,
+    "storeName": "Bible-Habakkuk",
+    "storeId": "vs_68961c19bb688191a984344058f9d455",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Habakkuk, Zephaniah, Haggai.txt (1050419 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Habakkuk, Zephaniah, Haggai.txt (1050419 bytes)"
+        ]
+      }
+    ]
+  },
+  "Zephaniah": {
+    "order": 36,
+    "storeName": "Bible-Zephaniah",
+    "storeId": "vs_68961c28cdb48191bc838ccc02f7eb03",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Habakkuk, Zephaniah, Haggai.txt (1050419 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Habakkuk, Zephaniah, Haggai.txt (1050419 bytes)"
+        ]
+      }
+    ]
+  },
+  "Haggai": {
+    "order": 37,
+    "storeName": "Bible-Haggai",
+    "storeId": "vs_68961c32b2888191a59e95803ccea9a2",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Habakkuk, Zephaniah, Haggai.txt (1050419 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Habakkuk, Zephaniah, Haggai.txt (1050419 bytes)"
+        ]
+      }
+    ]
+  },
+  "Zechariah": {
+    "order": 38,
+    "storeName": "Bible-Zechariah",
+    "storeId": "vs_68961c3ea59481918a8f45f4df7c62a1",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Zechariah, Malachi.txt (1748043 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Zechariah, Malachi.txt (1748043 bytes)"
+        ]
+      }
+    ]
+  },
+  "Malachi": {
+    "order": 39,
+    "storeName": "Bible-Malachi",
+    "storeId": "vs_68961d0be1808191bb161baa87cb0af6",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Zechariah, Malachi.txt (1748043 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume IV (Isaiah to Malachi).txt (10443123 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Zechariah, Malachi.txt (1748043 bytes)"
+        ]
+      }
+    ]
+  },
+  "Matthew": {
+    "order": 40,
+    "storeName": "Bible-Matthew",
+    "storeId": "vs_68961ded09688191a94f752951796014",
+    "fileCount": 14,
+    "files": [
+      "[Thomas Watson (c. 1620-1686)] Beatitudes_ An Exposition of Matthew 5_1-12.txt (928985 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-10. St. Chrysostom_ Homilies on the Gospel of Saint Matthew.txt (3346202 bytes)",
+      "[Thomas Aquinas, Saint (1225_-1274)] Catena Aurea - Gospel of Matthew.txt (2526126 bytes)",
+      "[Origen (c. 185-c. 254)] Origen_s Commentary on the Gospel of Matthew.txt (2155443 bytes)",
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)",
+      "[John Charles Ryle (1816-1900)] Expository Thoughts on Matthew.txt (689852 bytes)",
+      "[John Monro Gibson (1838-1921)] Expositor_s Bible_ The Gospel of St. Matthew.txt (855096 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 3.txt (1102406 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Ezekiel, Daniel and the Minor Prophets_ and Matthew Chaps. I to VIII.txt (1518058 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 1.txt (1474247 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 2.txt (1360809 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Matthew IX to XVIII.txt (1457814 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Matthew.txt (644580 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Matthew and Mark.txt (42520 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "watson",
+        "name": "Thomas Watson",
+        "fullName": "Thomas Watson (c. 1620-1686)",
+        "dates": "c. 1620-1686",
+        "files": [
+          "[Thomas Watson (c. 1620-1686)] Beatitudes_ An Exposition of Matthew 5_1-12.txt (928985 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-10. St. Chrysostom_ Homilies on the Gospel of Saint Matthew.txt (3346202 bytes)"
+        ]
+      },
+      {
+        "id": "aquinas",
+        "name": "Thomas Aquinas, Saint",
+        "fullName": "Thomas Aquinas, Saint (1225_-1274)",
+        "dates": "1225_-1274",
+        "files": [
+          "[Thomas Aquinas, Saint (1225_-1274)] Catena Aurea - Gospel of Matthew.txt (2526126 bytes)"
+        ]
+      },
+      {
+        "id": "origen",
+        "name": "Origen",
+        "fullName": "Origen (c. 185-c. 254)",
+        "dates": "c. 185-c. 254",
+        "files": [
+          "[Origen (c. 185-c. 254)] Origen_s Commentary on the Gospel of Matthew.txt (2155443 bytes)"
+        ]
+      },
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)"
+        ]
+      },
+      {
+        "id": "ryle",
+        "name": "John Charles Ryle",
+        "fullName": "John Charles Ryle (1816-1900)",
+        "dates": "1816-1900",
+        "files": [
+          "[John Charles Ryle (1816-1900)] Expository Thoughts on Matthew.txt (689852 bytes)"
+        ]
+      },
+      {
+        "id": "gibson",
+        "name": "John Monro Gibson",
+        "fullName": "John Monro Gibson (1838-1921)",
+        "dates": "1838-1921",
+        "files": [
+          "[John Monro Gibson (1838-1921)] Expositor_s Bible_ The Gospel of St. Matthew.txt (855096 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 3.txt (1102406 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 1.txt (1474247 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 2.txt (1360809 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Ezekiel, Daniel and the Minor Prophets_ and Matthew Chaps. I to VIII.txt (1518058 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Matthew IX to XVIII.txt (1457814 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Matthew.txt (644580 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Matthew and Mark.txt (42520 bytes)"
+        ]
+      }
+    ]
+  },
+  "Mark": {
+    "order": 41,
+    "storeName": "Bible-Mark",
+    "storeId": "vs_68961f22b6688191ae171a34aac6619b",
+    "fileCount": 10,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)",
+      "[Thomas Aquinas, Saint (1225_-1274)] Catena Aurea - Gospel of Mark.txt (852666 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Mark.txt (433139 bytes)",
+      "[John William Burgon (1813-1888)] Last Twelve Verses of the Gospel According to S. Mark Vindicated Against Recent Critical Objectors and Established.txt (1159950 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 3.txt (1102406 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 2.txt (1360809 bytes)",
+      "[George Alexander Chadwick (1840-1923)] Expositor_s Bible_ The Gospel According to St. Mark.txt (855692 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 1.txt (1474247 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Mark.txt (1192626 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Matthew and Mark.txt (42520 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)"
+        ]
+      },
+      {
+        "id": "aquinas",
+        "name": "Thomas Aquinas, Saint",
+        "fullName": "Thomas Aquinas, Saint (1225_-1274)",
+        "dates": "1225_-1274",
+        "files": [
+          "[Thomas Aquinas, Saint (1225_-1274)] Catena Aurea - Gospel of Mark.txt (852666 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Mark.txt (433139 bytes)"
+        ]
+      },
+      {
+        "id": "burgon",
+        "name": "John William Burgon",
+        "fullName": "John William Burgon (1813-1888)",
+        "dates": "1813-1888",
+        "files": [
+          "[John William Burgon (1813-1888)] Last Twelve Verses of the Gospel According to S. Mark Vindicated Against Recent Critical Objectors and Established.txt (1159950 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 3.txt (1102406 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 2.txt (1360809 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 1.txt (1474247 bytes)"
+        ]
+      },
+      {
+        "id": "chadwick",
+        "name": "George Alexander Chadwick",
+        "fullName": "George Alexander Chadwick (1840-1923)",
+        "dates": "1840-1923",
+        "files": [
+          "[George Alexander Chadwick (1840-1923)] Expositor_s Bible_ The Gospel According to St. Mark.txt (855692 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Mark.txt (1192626 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Matthew and Mark.txt (42520 bytes)"
+        ]
+      }
+    ]
+  },
+  "Luke": {
+    "order": 42,
+    "storeName": "Bible-Luke",
+    "storeId": "vs_6896203bdae88191b55f059da89167e2",
+    "fileCount": 9,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)",
+      "[Matthew Mead (1629-1699)] Name in Heaven, the Truest Ground of Joy, on Luke x. 20. and the Power of Grace in Weaning the Heart from the World, on Psal. cxxxi. 1..txt (177814 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 3.txt (1102406 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 1.txt (1474247 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 2.txt (1360809 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Luke.txt (1498242 bytes)",
+      "[Henry Burton (1840-_)] Expositor_s Bible_ The Gospel According to St. Luke.txt (815068 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Luke.txt (867761 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Luke and John.txt (39878 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)"
+        ]
+      },
+      {
+        "id": "mead",
+        "name": "Matthew Mead",
+        "fullName": "Matthew Mead (1629-1699)",
+        "dates": "1629-1699",
+        "files": [
+          "[Matthew Mead (1629-1699)] Name in Heaven, the Truest Ground of Joy, on Luke x. 20. and the Power of Grace in Weaning the Heart from the World, on Psal. cxxxi. 1..txt (177814 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 3.txt (1102406 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 1.txt (1474247 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Matthew, Mark, Luke - Volume 2.txt (1360809 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Luke.txt (1498242 bytes)"
+        ]
+      },
+      {
+        "id": "burton",
+        "name": "Henry Burton",
+        "fullName": "Henry Burton (1840-_)",
+        "dates": "1840-_",
+        "files": [
+          "[Henry Burton (1840-_)] Expositor_s Bible_ The Gospel According to St. Luke.txt (815068 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Luke.txt (867761 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Luke and John.txt (39878 bytes)"
+        ]
+      }
+    ]
+  },
+  "John": {
+    "order": 43,
+    "storeName": "Bible-John",
+    "storeId": "vs_6896205458948191b2d56068a3e8aef3",
+    "fileCount": 12,
+    "files": [
+      "[William Alexander (1824-1911)] Expositor_s Bible_ The Epistles of St. John.txt (780181 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-14. Saint Chrysostom_ Homilies on the Gospel of St. John and the Epistle to the Hebrews.txt (3944126 bytes)",
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)",
+      "[Marcus Dods (1834-1909)] Expositor_s Bible_ The Gospel of St. John, Volume II.txt (713954 bytes)",
+      "[Marcus Dods (1834-1909)] Expositor_s Bible_ The Gospel of St. John, Volume I.txt (652890 bytes)",
+      "[John William McGarvey (1829-1911)] Four-Fold Gospel.txt (1967400 bytes)",
+      "[John Calvin (1509-1564)] Commentary on John - Volume 2.txt (805771 bytes)",
+      "[John Calvin (1509-1564)] Commentary on John - Volume 1.txt (1206378 bytes)",
+      "[Barton Warren Johnson (1833-1894)] New Testament Commentary Vol. III_ John.txt (1120280 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ St John Chs. XV to XXI.txt (750261 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ St John Ch. I to XIV.txt (1390270 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Luke and John.txt (39878 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "alexander",
+        "name": "William Alexander",
+        "fullName": "William Alexander (1824-1911)",
+        "dates": "1824-1911",
+        "files": [
+          "[William Alexander (1824-1911)] Expositor_s Bible_ The Epistles of St. John.txt (780181 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-14. Saint Chrysostom_ Homilies on the Gospel of St. John and the Epistle to the Hebrews.txt (3944126 bytes)"
+        ]
+      },
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume V (Matthew to John).txt (8511700 bytes)"
+        ]
+      },
+      {
+        "id": "dods",
+        "name": "Marcus Dods",
+        "fullName": "Marcus Dods (1834-1909)",
+        "dates": "1834-1909",
+        "files": [
+          "[Marcus Dods (1834-1909)] Expositor_s Bible_ The Gospel of St. John, Volume II.txt (713954 bytes)",
+          "[Marcus Dods (1834-1909)] Expositor_s Bible_ The Gospel of St. John, Volume I.txt (652890 bytes)"
+        ]
+      },
+      {
+        "id": "mcgarvey",
+        "name": "John William McGarvey",
+        "fullName": "John William McGarvey (1829-1911)",
+        "dates": "1829-1911",
+        "files": [
+          "[John William McGarvey (1829-1911)] Four-Fold Gospel.txt (1967400 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on John - Volume 2.txt (805771 bytes)",
+          "[John Calvin (1509-1564)] Commentary on John - Volume 1.txt (1206378 bytes)"
+        ]
+      },
+      {
+        "id": "johnson",
+        "name": "Barton Warren Johnson",
+        "fullName": "Barton Warren Johnson (1833-1894)",
+        "dates": "1833-1894",
+        "files": [
+          "[Barton Warren Johnson (1833-1894)] New Testament Commentary Vol. III_ John.txt (1120280 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ St John Chs. XV to XXI.txt (750261 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ St John Ch. I to XIV.txt (1390270 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Luke and John.txt (39878 bytes)"
+        ]
+      }
+    ]
+  },
+  "Acts": {
+    "order": 44,
+    "storeName": "Bible-Acts",
+    "storeId": "vs_6896235448e0819185d7ef16c0159d7d",
+    "fileCount": 23,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-11. Saint Chrysostom_ Homilies on the Acts of the Apostles and the Epistle to the Romans.txt (4443809 bytes)",
+      "[Philip Schaff (1819-1893)] ANF09. The Gospel of Peter, The Diatessaron of Tatian, The Apocalypse of Peter, the Vision of Paul, The Apocalypse of the Virgin and Sedrach, The Testament of Abraham, The Acts of Xanthippe and Polyxe.txt (3048024 bytes)",
+      "[Pamphilus of Caesarea (_-309)] Exposition of the Chapters of the Acts of the Apostles.txt (2865465 bytes)",
+      "[John William McGarvey (1829-1911)] Commentary on Acts of the Apostles.txt (1236229 bytes)",
+      "[Anonymous (14th c. English)] Constitutions of the Holy Apostles.txt (2862880 bytes)",
+      "[Joseph Ernest Renan (1823-1892)] History of the Origins of Christianity. Book II. The Apostles..txt (531864 bytes)",
+      "[John Tulloch (1823-1886)] Some Facts of Religion and of Life_ Sermons Preached before Her Majesty the Queen in Scotland, 1866-76..txt (416306 bytes)",
+      "[John Young (1805-1881)] Christ of History_ An Argument Grounded in the Facts of His Life on Earth..txt (391646 bytes)",
+      "[John Dick (1764-1833)] Lectures on the Acts of the Apostles..txt (1062599 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Acts - Volume 2.txt (1096033 bytes)",
+      "[John Bradford (1510-1555)] Sermons and Tracts by that Worthy Martyr of Christ, John Bradford.txt (285816 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Acts - Volume 1.txt (1405690 bytes)",
+      "[George Thomas Stokes (1843-1898)] Expositor_s Bible_ The Acts of the Apostles, Volume II.txt (1132258 bytes)",
+      "[Archelaus, Bishop of Caschar] Acts of the Disputation with the Heresiarch Manes.txt (2865465 bytes)",
+      "[George Thomas Stokes (1843-1898)] Expositor_s Bible_ The Acts of the Apostles, Volume I.txt (964239 bytes)",
+      "[Anonymous (14th c. English)] Acts of Xanthippe and Polyxena.txt (2155443 bytes)",
+      "[Ellen Gould White (1827-1915)] Acts of the Apostles.txt (1024643 bytes)",
+      "[Anonymous (14th c. English)] Teaching of the Twelve Apostles.txt (2862880 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Acts.txt (1478456 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ The Acts.txt (1493922 bytes)",
+      "[Adolf Harnack (1851-1930)] Apostles_ Creed.txt (105149 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament_ Explanatory and Practical_ Acts.txt (42184 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-11. Saint Chrysostom_ Homilies on the Acts of the Apostles and the Epistle to the Romans.txt (4443809 bytes)",
+          "[Philip Schaff (1819-1893)] ANF09. The Gospel of Peter, The Diatessaron of Tatian, The Apocalypse of Peter, the Vision of Paul, The Apocalypse of the Virgin and Sedrach, The Testament of Abraham, The Acts of Xanthippe and Polyxe.txt (3048024 bytes)"
+        ]
+      },
+      {
+        "id": "caesarea",
+        "name": "Pamphilus of Caesarea",
+        "fullName": "Pamphilus of Caesarea (_-309)",
+        "dates": "_-309",
+        "files": [
+          "[Pamphilus of Caesarea (_-309)] Exposition of the Chapters of the Acts of the Apostles.txt (2865465 bytes)"
+        ]
+      },
+      {
+        "id": "mcgarvey",
+        "name": "John William McGarvey",
+        "fullName": "John William McGarvey (1829-1911)",
+        "dates": "1829-1911",
+        "files": [
+          "[John William McGarvey (1829-1911)] Commentary on Acts of the Apostles.txt (1236229 bytes)"
+        ]
+      },
+      {
+        "id": "anonymous",
+        "name": "Anonymous",
+        "fullName": "Anonymous (14th c. English)",
+        "dates": "14th c. English",
+        "files": [
+          "[Anonymous (14th c. English)] Constitutions of the Holy Apostles.txt (2862880 bytes)",
+          "[Anonymous (14th c. English)] Acts of Xanthippe and Polyxena.txt (2155443 bytes)",
+          "[Anonymous (14th c. English)] Teaching of the Twelve Apostles.txt (2862880 bytes)"
+        ]
+      },
+      {
+        "id": "renan",
+        "name": "Joseph Ernest Renan",
+        "fullName": "Joseph Ernest Renan (1823-1892)",
+        "dates": "1823-1892",
+        "files": [
+          "[Joseph Ernest Renan (1823-1892)] History of the Origins of Christianity. Book II. The Apostles..txt (531864 bytes)"
+        ]
+      },
+      {
+        "id": "tulloch",
+        "name": "John Tulloch",
+        "fullName": "John Tulloch (1823-1886)",
+        "dates": "1823-1886",
+        "files": [
+          "[John Tulloch (1823-1886)] Some Facts of Religion and of Life_ Sermons Preached before Her Majesty the Queen in Scotland, 1866-76..txt (416306 bytes)"
+        ]
+      },
+      {
+        "id": "young",
+        "name": "John Young",
+        "fullName": "John Young (1805-1881)",
+        "dates": "1805-1881",
+        "files": [
+          "[John Young (1805-1881)] Christ of History_ An Argument Grounded in the Facts of His Life on Earth..txt (391646 bytes)"
+        ]
+      },
+      {
+        "id": "dick",
+        "name": "John Dick",
+        "fullName": "John Dick (1764-1833)",
+        "dates": "1764-1833",
+        "files": [
+          "[John Dick (1764-1833)] Lectures on the Acts of the Apostles..txt (1062599 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Acts - Volume 2.txt (1096033 bytes)",
+          "[John Calvin (1509-1564)] Commentary on Acts - Volume 1.txt (1405690 bytes)"
+        ]
+      },
+      {
+        "id": "bradford",
+        "name": "John Bradford",
+        "fullName": "John Bradford (1510-1555)",
+        "dates": "1510-1555",
+        "files": [
+          "[John Bradford (1510-1555)] Sermons and Tracts by that Worthy Martyr of Christ, John Bradford.txt (285816 bytes)"
+        ]
+      },
+      {
+        "id": "stokes",
+        "name": "George Thomas Stokes",
+        "fullName": "George Thomas Stokes (1843-1898)",
+        "dates": "1843-1898",
+        "files": [
+          "[George Thomas Stokes (1843-1898)] Expositor_s Bible_ The Acts of the Apostles, Volume II.txt (1132258 bytes)",
+          "[George Thomas Stokes (1843-1898)] Expositor_s Bible_ The Acts of the Apostles, Volume I.txt (964239 bytes)"
+        ]
+      },
+      {
+        "id": "caschar",
+        "name": "Archelaus, Bishop of Caschar",
+        "fullName": "Archelaus, Bishop of Caschar",
+        "dates": "",
+        "files": [
+          "[Archelaus, Bishop of Caschar] Acts of the Disputation with the Heresiarch Manes.txt (2865465 bytes)"
+        ]
+      },
+      {
+        "id": "white",
+        "name": "Ellen Gould White",
+        "fullName": "Ellen Gould White (1827-1915)",
+        "dates": "1827-1915",
+        "files": [
+          "[Ellen Gould White (1827-1915)] Acts of the Apostles.txt (1024643 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Acts.txt (1478456 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ The Acts.txt (1493922 bytes)"
+        ]
+      },
+      {
+        "id": "harnack",
+        "name": "Adolf Harnack",
+        "fullName": "Adolf Harnack (1851-1930)",
+        "dates": "1851-1930",
+        "files": [
+          "[Adolf Harnack (1851-1930)] Apostles_ Creed.txt (105149 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament_ Explanatory and Practical_ Acts.txt (42184 bytes)"
+        ]
+      }
+    ]
+  },
+  "Romans": {
+    "order": 45,
+    "storeName": "Bible-Romans",
+    "storeId": "vs_6896240fde5c8191b6e2b86f8a5e1498",
+    "fileCount": 10,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Romans.txt (34408 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-11. Saint Chrysostom_ Homilies on the Acts of the Apostles and the Epistle to the Romans.txt (4443809 bytes)",
+      "[William R. Newell (1868-1956)] Romans Verse-by-Verse.txt (1687745 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Romans.txt (1876465 bytes)",
+      "[Martin Luther (1483-1546)] Preface to the Letter of St. Paul to the Romans.txt (39213 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Romans and Corinthians.txt (1484621 bytes)",
+      "[Handley Carr Glyn Moule (1841-1920)] Expositor_s Bible_ The Epistle of St. Paul to the Romans.txt (842983 bytes)",
+      "[Benjamin Jowett (1817-1893)] Epistles of St. Paul to the Thessalonians, Galatians and Romans_ Essays and Dissertations.txt (918063 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Romans.txt (411397 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Romans.txt (34408 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-11. Saint Chrysostom_ Homilies on the Acts of the Apostles and the Epistle to the Romans.txt (4443809 bytes)"
+        ]
+      },
+      {
+        "id": "newell",
+        "name": "William R. Newell",
+        "fullName": "William R. Newell (1868-1956)",
+        "dates": "1868-1956",
+        "files": [
+          "[William R. Newell (1868-1956)] Romans Verse-by-Verse.txt (1687745 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Romans.txt (1876465 bytes)"
+        ]
+      },
+      {
+        "id": "luther",
+        "name": "Martin Luther",
+        "fullName": "Martin Luther (1483-1546)",
+        "dates": "1483-1546",
+        "files": [
+          "[Martin Luther (1483-1546)] Preface to the Letter of St. Paul to the Romans.txt (39213 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Romans and Corinthians.txt (1484621 bytes)"
+        ]
+      },
+      {
+        "id": "moule",
+        "name": "Handley Carr Glyn Moule",
+        "fullName": "Handley Carr Glyn Moule (1841-1920)",
+        "dates": "1841-1920",
+        "files": [
+          "[Handley Carr Glyn Moule (1841-1920)] Expositor_s Bible_ The Epistle of St. Paul to the Romans.txt (842983 bytes)"
+        ]
+      },
+      {
+        "id": "jowett",
+        "name": "Benjamin Jowett",
+        "fullName": "Benjamin Jowett (1817-1893)",
+        "dates": "1817-1893",
+        "files": [
+          "[Benjamin Jowett (1817-1893)] Epistles of St. Paul to the Thessalonians, Galatians and Romans_ Essays and Dissertations.txt (918063 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Romans.txt (411397 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Corinthians": {
+    "order": 46,
+    "storeName": "Bible-1 Corinthians",
+    "storeId": "vs_689624a306708191bc8a4374281f9150",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 1 Corinthians.txt (493291 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ II Corinthians and Galatians.txt (38135 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ I Corinthians.txt (34216 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 1 Corinthians.txt (493291 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ II Corinthians and Galatians.txt (38135 bytes)",
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ I Corinthians.txt (34216 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Corinthians": {
+    "order": 47,
+    "storeName": "Bible-2 Corinthians",
+    "storeId": "vs_6896250c6a4c8191b53f01eacec1d935",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ II Corinthians and Galatians.txt (38135 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 2 Corinthians.txt (230020 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ II Corinthians and Galatians.txt (38135 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 2 Corinthians.txt (230020 bytes)"
+        ]
+      }
+    ]
+  },
+  "Galatians": {
+    "order": 48,
+    "storeName": "Bible-Galatians",
+    "storeId": "vs_6896251957a48191bd5ea195f30424ee",
+    "fileCount": 9,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)",
+      "[Martin Luther (1483-1546)] Commentary on St. Paul_s Epistle to the Galatians.txt (532038 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)",
+      "[Benjamin Jowett (1817-1893)] Epistles of St. Paul to the Thessalonians, Galatians and Romans_ Essays and Dissertations.txt (918063 bytes)",
+      "[George Gillanders Findlay (1849-1919)] Expositor_s Bible_ The Epistle to the Galatians.txt (850200 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Galatians and Ephesians.txt (995872 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Galatians.txt (160870 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ II Corinthians and Galatians.txt (38135 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)"
+        ]
+      },
+      {
+        "id": "luther",
+        "name": "Martin Luther",
+        "fullName": "Martin Luther (1483-1546)",
+        "dates": "1483-1546",
+        "files": [
+          "[Martin Luther (1483-1546)] Commentary on St. Paul_s Epistle to the Galatians.txt (532038 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)"
+        ]
+      },
+      {
+        "id": "jowett",
+        "name": "Benjamin Jowett",
+        "fullName": "Benjamin Jowett (1817-1893)",
+        "dates": "1817-1893",
+        "files": [
+          "[Benjamin Jowett (1817-1893)] Epistles of St. Paul to the Thessalonians, Galatians and Romans_ Essays and Dissertations.txt (918063 bytes)"
+        ]
+      },
+      {
+        "id": "findlay",
+        "name": "George Gillanders Findlay",
+        "fullName": "George Gillanders Findlay (1849-1919)",
+        "dates": "1849-1919",
+        "files": [
+          "[George Gillanders Findlay (1849-1919)] Expositor_s Bible_ The Epistle to the Galatians.txt (850200 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Galatians and Ephesians.txt (995872 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Galatians.txt (160870 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ II Corinthians and Galatians.txt (38135 bytes)"
+        ]
+      }
+    ]
+  },
+  "Ephesians": {
+    "order": 49,
+    "storeName": "Bible-Ephesians",
+    "storeId": "vs_68962537a8a481918ff738a6cc7b53bd",
+    "fileCount": 7,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Galatians and Ephesians.txt (995872 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)",
+      "[George Gillanders Findlay (1849-1919)] Expositor_s Bible_ The Epistle to the Ephesians.txt (824453 bytes)",
+      "[Charles Hodge (1797-1878)] Commentary on the Epistle to the Ephesians.txt (938946 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Ephesians.txt (144132 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Ephesians, Philippians, and Colossians.txt (27148 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Galatians and Ephesians.txt (995872 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)"
+        ]
+      },
+      {
+        "id": "findlay",
+        "name": "George Gillanders Findlay",
+        "fullName": "George Gillanders Findlay (1849-1919)",
+        "dates": "1849-1919",
+        "files": [
+          "[George Gillanders Findlay (1849-1919)] Expositor_s Bible_ The Epistle to the Ephesians.txt (824453 bytes)"
+        ]
+      },
+      {
+        "id": "hodge",
+        "name": "Charles Hodge",
+        "fullName": "Charles Hodge (1797-1878)",
+        "dates": "1797-1878",
+        "files": [
+          "[Charles Hodge (1797-1878)] Commentary on the Epistle to the Ephesians.txt (938946 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Ephesians.txt (144132 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Ephesians, Philippians, and Colossians.txt (27148 bytes)"
+        ]
+      }
+    ]
+  },
+  "Philippians": {
+    "order": 50,
+    "storeName": "Bible-Philippians",
+    "storeId": "vs_689625b57cb88191b8f3c900215e1c00",
+    "fileCount": 10,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)",
+      "[Polycarp, St. (c.69-c.155)] Epistle to the Philippians.txt (2838772 bytes)",
+      "[Robert Rainy (1826-1906)] Expositor_s Bible_ The Epistle to the Philippians.txt (549610 bytes)",
+      "[Thomas Watson (c. 1620-1686)] Art of Divine Contentment_ An Exposition of Philippians 4_11.txt (259564 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Philippians, Colossians, and Thessalonians.txt (1066457 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)",
+      "[Augustus Johann Neander (1789-1850)] Scriptural Expositions of Dr. Augustus Neander_ I. The Epistle of Paul to the Philippians, Practically Explained..txt (193248 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Ephesians, Philippians, and Colossians.txt (27148 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Philippians.txt (99708 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)"
+        ]
+      },
+      {
+        "id": "st",
+        "name": "Polycarp, St.",
+        "fullName": "Polycarp, St. (c.69-c.155)",
+        "dates": "c.69-c.155",
+        "files": [
+          "[Polycarp, St. (c.69-c.155)] Epistle to the Philippians.txt (2838772 bytes)"
+        ]
+      },
+      {
+        "id": "rainy",
+        "name": "Robert Rainy",
+        "fullName": "Robert Rainy (1826-1906)",
+        "dates": "1826-1906",
+        "files": [
+          "[Robert Rainy (1826-1906)] Expositor_s Bible_ The Epistle to the Philippians.txt (549610 bytes)"
+        ]
+      },
+      {
+        "id": "watson",
+        "name": "Thomas Watson",
+        "fullName": "Thomas Watson (c. 1620-1686)",
+        "dates": "c. 1620-1686",
+        "files": [
+          "[Thomas Watson (c. 1620-1686)] Art of Divine Contentment_ An Exposition of Philippians 4_11.txt (259564 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Philippians, Colossians, and Thessalonians.txt (1066457 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)"
+        ]
+      },
+      {
+        "id": "neander",
+        "name": "Augustus Johann Neander",
+        "fullName": "Augustus Johann Neander (1789-1850)",
+        "dates": "1789-1850",
+        "files": [
+          "[Augustus Johann Neander (1789-1850)] Scriptural Expositions of Dr. Augustus Neander_ I. The Epistle of Paul to the Philippians, Practically Explained..txt (193248 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Ephesians, Philippians, and Colossians.txt (27148 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Philippians.txt (99708 bytes)"
+        ]
+      }
+    ]
+  },
+  "Colossians": {
+    "order": 51,
+    "storeName": "Bible-Colossians",
+    "storeId": "vs_689625d60f2c819198069449ab986a98",
+    "fileCount": 6,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Philippians, Colossians, and Thessalonians.txt (1066457 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ Colossians and Philemon.txt (885109 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Ephesians, Philippians, and Colossians.txt (27148 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)",
+          "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ Colossians and Philemon.txt (885109 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Philippians, Colossians, and Thessalonians.txt (1066457 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Ephesians, Philippians, and Colossians.txt (27148 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Thessalonians": {
+    "order": 52,
+    "storeName": "Bible-1 Thessalonians",
+    "storeId": "vs_689625ee293c819180268cf7b8beb0bd",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 1 Thessalonians.txt (128385 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 1 Thessalonians.txt (128385 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Thessalonians": {
+    "order": 53,
+    "storeName": "Bible-2 Thessalonians",
+    "storeId": "vs_689625f9806881918ee0928a3df643a5",
+    "fileCount": 2,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 2 Thessalonians.txt (83869 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 2 Thessalonians.txt (83869 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Timothy": {
+    "order": 54,
+    "storeName": "Bible-1 Timothy",
+    "storeId": "vs_68962603a3b08191811fb160161c83c2",
+    "fileCount": 3,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 1 Timothy.txt (170227 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositions of Holy Scripture_ Second Corinthians, Galatians, and Philippians Chapters I to End. Colossians, Thessalonians, and First Timothy.txt (1504072 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - 1 Timothy.txt (170227 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Timothy": {
+    "order": 55,
+    "storeName": "Bible-2 Timothy",
+    "storeId": "vs_68962bde94208191b57319c838d59fe5",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "Titus": {
+    "order": 56,
+    "storeName": "Bible-Titus",
+    "storeId": "vs_68962613e9c08191b5c6daf1d3f18580",
+    "fileCount": 5,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Timothy, Titus, Philemon.txt (992633 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Titus.txt (57377 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Thessalonians, Timothy, Titus, and Philemon.txt (30583 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Timothy, Titus, Philemon.txt (992633 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Titus.txt (57377 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Thessalonians, Timothy, Titus, and Philemon.txt (30583 bytes)"
+        ]
+      }
+    ]
+  },
+  "Philemon": {
+    "order": 57,
+    "storeName": "Bible-Philemon",
+    "storeId": "vs_689626b07d448191a0de7f1e67dea6f7",
+    "fileCount": 6,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)",
+      "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ Colossians and Philemon.txt (885109 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Thessalonians, Timothy, Titus, and Philemon.txt (30583 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Timothy, Titus, Philemon.txt (992633 bytes)",
+      "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Philemon.txt (21654 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-13. Saint Chrysostom_ Homilies on Galatians, Ephesians, Philippians, Colossians, Thessalonians, Timothy, Titus, and Philemon.txt (3934224 bytes)"
+        ]
+      },
+      {
+        "id": "maclaren",
+        "name": "Alexander MacLaren",
+        "fullName": "Alexander MacLaren (1826-1910)",
+        "dates": "1826-1910",
+        "files": [
+          "[Alexander MacLaren (1826-1910)] Expositor_s Bible_ Colossians and Philemon.txt (885109 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Thessalonians, Timothy, Titus, and Philemon.txt (30583 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Timothy, Titus, Philemon.txt (992633 bytes)"
+        ]
+      },
+      {
+        "id": "robertson",
+        "name": "Archibald Thomas Robertson",
+        "fullName": "Archibald Thomas Robertson (1863-1934)",
+        "dates": "1863-1934",
+        "files": [
+          "[Archibald Thomas Robertson (1863-1934)] Word Pictures in the New Testament - Philemon.txt (21654 bytes)"
+        ]
+      }
+    ]
+  },
+  "Hebrews": {
+    "order": 58,
+    "storeName": "Bible-Hebrews",
+    "storeId": "vs_6896273114208191bdfd9db54dbd519c",
+    "fileCount": 7,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Philip Schaff (1819-1893)] NPNF1-14. Saint Chrysostom_ Homilies on the Gospel of St. John and the Epistle to the Hebrews.txt (3944126 bytes)",
+      "[Thomas Charles Edwards (1837-1900)] Expositor_s Bible_ The Epistle to the Hebrews.txt (489880 bytes)",
+      "[Edward Fudge (1944-)] Our Man In Heaven_ An Exposition of the Epistle to the Hebrews.txt (505493 bytes)",
+      "[John Calvin (1509-1564)] Commentary on Hebrews.txt (1188413 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Hebrews.txt (34020 bytes)",
+      "[Handley Carr Glyn Moule (1841-1920)] Messages From the Epistle of Hebrews.txt (167651 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "schaff",
+        "name": "Philip Schaff",
+        "fullName": "Philip Schaff (1819-1893)",
+        "dates": "1819-1893",
+        "files": [
+          "[Philip Schaff (1819-1893)] NPNF1-14. Saint Chrysostom_ Homilies on the Gospel of St. John and the Epistle to the Hebrews.txt (3944126 bytes)"
+        ]
+      },
+      {
+        "id": "edwards",
+        "name": "Thomas Charles Edwards",
+        "fullName": "Thomas Charles Edwards (1837-1900)",
+        "dates": "1837-1900",
+        "files": [
+          "[Thomas Charles Edwards (1837-1900)] Expositor_s Bible_ The Epistle to the Hebrews.txt (489880 bytes)"
+        ]
+      },
+      {
+        "id": "fudge",
+        "name": "Edward Fudge",
+        "fullName": "Edward Fudge (1944-)",
+        "dates": "1944-",
+        "files": [
+          "[Edward Fudge (1944-)] Our Man In Heaven_ An Exposition of the Epistle to the Hebrews.txt (505493 bytes)"
+        ]
+      },
+      {
+        "id": "calvin",
+        "name": "John Calvin",
+        "fullName": "John Calvin (1509-1564)",
+        "dates": "1509-1564",
+        "files": [
+          "[John Calvin (1509-1564)] Commentary on Hebrews.txt (1188413 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Hebrews.txt (34020 bytes)"
+        ]
+      },
+      {
+        "id": "moule",
+        "name": "Handley Carr Glyn Moule",
+        "fullName": "Handley Carr Glyn Moule (1841-1920)",
+        "dates": "1841-1920",
+        "files": [
+          "[Handley Carr Glyn Moule (1841-1920)] Messages From the Epistle of Hebrews.txt (167651 bytes)"
+        ]
+      }
+    ]
+  },
+  "James": {
+    "order": 59,
+    "storeName": "Bible-James",
+    "storeId": "vs_6896274a18988191b016a1bafa59a241",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[James Moffat, D.D. (1870-1944)] General Epistles_ James, Peter, and Judas.txt (607537 bytes)",
+      "[Augustus Johann Neander (1789-1850)] Scriptural Expositions of Dr. Augustus Neander_ II. The Epistle of James, Practically Explained..txt (158636 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ James, Peter, John, and Jude.txt (40073 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "dd",
+        "name": "James Moffat, D.D.",
+        "fullName": "James Moffat, D.D. (1870-1944)",
+        "dates": "1870-1944",
+        "files": [
+          "[James Moffat, D.D. (1870-1944)] General Epistles_ James, Peter, and Judas.txt (607537 bytes)"
+        ]
+      },
+      {
+        "id": "neander",
+        "name": "Augustus Johann Neander",
+        "fullName": "Augustus Johann Neander (1789-1850)",
+        "dates": "1789-1850",
+        "files": [
+          "[Augustus Johann Neander (1789-1850)] Scriptural Expositions of Dr. Augustus Neander_ II. The Epistle of James, Practically Explained..txt (158636 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ James, Peter, John, and Jude.txt (40073 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 Peter": {
+    "order": 60,
+    "storeName": "Bible-1 Peter",
+    "storeId": "vs_68962bdef64c81919c8a08ac7dca1b02",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 Peter": {
+    "order": 61,
+    "storeName": "Bible-2 Peter",
+    "storeId": "vs_68962bdf5acc81918e69d7596cb0ad48",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "1 John": {
+    "order": 62,
+    "storeName": "Bible-1 John",
+    "storeId": "vs_68962bdfccd081918bb48b71cda5947d",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "2 John": {
+    "order": 63,
+    "storeName": "Bible-2 John",
+    "storeId": "vs_68962be03d848191afafb284dcc5f896",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "3 John": {
+    "order": 64,
+    "storeName": "Bible-3 John",
+    "storeId": "vs_68962be0a2b08191aa2656c1f4969168",
+    "fileCount": 1,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      }
+    ]
+  },
+  "Jude": {
+    "order": 65,
+    "storeName": "Bible-Jude",
+    "storeId": "vs_689627784e08819196f3147898ae7949",
+    "fileCount": 4,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ James, Peter, John, and Jude.txt (40073 bytes)",
+      "[Martin Luther (1483-1546)] Epistles of St. Peter and St. Jude Preached and Explained.txt (23608 bytes)",
+      "[Alfred Plummer] Expositor_s Bible_ The General Epistles of St. James and St. Jude.txt (976611 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ James, Peter, John, and Jude.txt (40073 bytes)"
+        ]
+      },
+      {
+        "id": "luther",
+        "name": "Martin Luther",
+        "fullName": "Martin Luther (1483-1546)",
+        "dates": "1483-1546",
+        "files": [
+          "[Martin Luther (1483-1546)] Epistles of St. Peter and St. Jude Preached and Explained.txt (23608 bytes)"
+        ]
+      },
+      {
+        "id": "plummer",
+        "name": "Alfred Plummer",
+        "fullName": "Alfred Plummer",
+        "dates": "",
+        "files": [
+          "[Alfred Plummer] Expositor_s Bible_ The General Epistles of St. James and St. Jude.txt (976611 bytes)"
+        ]
+      }
+    ]
+  },
+  "Revelation": {
+    "order": 66,
+    "storeName": "Bible-Revelation",
+    "storeId": "vs_6896278524a08191a2b12fb9078ac2a0",
+    "fileCount": 7,
+    "files": [
+      "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)",
+      "[Victorinus of Pettau (_-c.303)] Commentary on the Apocalypse of the Blessed John.txt (2862880 bytes)",
+      "[William M. Groom] Genesis to Revelation Bible Course.txt (918732 bytes)",
+      "[William Milligan (1821-1893)] Expositor_s Bible_ The Book of Revelation.txt (752627 bytes)",
+      "[Samuel Dickey Gordon (1859-1936)] Quiet Talks On The Crowned Christ of Revelation.txt (367962 bytes)",
+      "[Ethelbert William Bullinger (1837-1913)] Commentary on Revelation.txt (1433506 bytes)",
+      "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Revelation.txt (46542 bytes)"
+    ],
+    "authors": [
+      {
+        "id": "henry",
+        "name": "Matthew Henry",
+        "fullName": "Matthew Henry (1662-1714)",
+        "dates": "1662-1714",
+        "files": [
+          "[Matthew Henry (1662-1714)] Commentary on the Whole Bible Volume VI (Acts to Revelation).txt (8011931 bytes)"
+        ]
+      },
+      {
+        "id": "pettau",
+        "name": "Victorinus of Pettau",
+        "fullName": "Victorinus of Pettau (_-c.303)",
+        "dates": "_-c.303",
+        "files": [
+          "[Victorinus of Pettau (_-c.303)] Commentary on the Apocalypse of the Blessed John.txt (2862880 bytes)"
+        ]
+      },
+      {
+        "id": "groom",
+        "name": "William M. Groom",
+        "fullName": "William M. Groom",
+        "dates": "",
+        "files": [
+          "[William M. Groom] Genesis to Revelation Bible Course.txt (918732 bytes)"
+        ]
+      },
+      {
+        "id": "milligan",
+        "name": "William Milligan",
+        "fullName": "William Milligan (1821-1893)",
+        "dates": "1821-1893",
+        "files": [
+          "[William Milligan (1821-1893)] Expositor_s Bible_ The Book of Revelation.txt (752627 bytes)"
+        ]
+      },
+      {
+        "id": "gordon",
+        "name": "Samuel Dickey Gordon",
+        "fullName": "Samuel Dickey Gordon (1859-1936)",
+        "dates": "1859-1936",
+        "files": [
+          "[Samuel Dickey Gordon (1859-1936)] Quiet Talks On The Crowned Christ of Revelation.txt (367962 bytes)"
+        ]
+      },
+      {
+        "id": "bullinger",
+        "name": "Ethelbert William Bullinger",
+        "fullName": "Ethelbert William Bullinger (1837-1913)",
+        "dates": "1837-1913",
+        "files": [
+          "[Ethelbert William Bullinger (1837-1913)] Commentary on Revelation.txt (1433506 bytes)"
+        ]
+      },
+      {
+        "id": "barnes",
+        "name": "Albert Barnes",
+        "fullName": "Albert Barnes (1798-1870)",
+        "dates": "1798-1870",
+        "files": [
+          "[Albert Barnes (1798-1870)] Notes on the New Testament Explanatory and Practical_ Revelation.txt (46542 bytes)"
+        ]
+      }
+    ]
+  }
+}

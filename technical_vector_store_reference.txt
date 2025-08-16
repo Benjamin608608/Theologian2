@@ -1,0 +1,164 @@
+聖經註釋向量資料庫技術參考文件
+====================================
+
+更新時間：2024年
+系統架構：OpenAI Vector Store + Assistants API
+
+## 資料庫命名規則
+
+```javascript
+const STORE_PREFIX = process.env.BIBLE_STORE_PREFIX || 'Bible-';
+const targetName = `${STORE_PREFIX}${bookEn}`;
+```
+
+## 66卷經卷對應表
+
+### 舊約 (Old Testament) - 39卷
+
+| 序號 | 中文名稱 | 英文名稱 | bookEn 參數 | 向量資料庫名稱 |
+|------|----------|----------|-------------|----------------|
+| 1    | 創世記   | Genesis  | Genesis     | Bible-Genesis  |
+| 2    | 出埃及記 | Exodus   | Exodus      | Bible-Exodus   |
+| 3    | 利未記   | Leviticus| Leviticus   | Bible-Leviticus|
+| 4    | 民數記   | Numbers  | Numbers     | Bible-Numbers  |
+| 5    | 申命記   | Deuteronomy | Deuteronomy | Bible-Deuteronomy |
+| 6    | 約書亞記 | Joshua   | Joshua      | Bible-Joshua   |
+| 7    | 士師記   | Judges   | Judges      | Bible-Judges   |
+| 8    | 路得記   | Ruth     | Ruth        | Bible-Ruth     |
+| 9    | 撒母耳記上 | 1 Samuel | 1 Samuel   | Bible-1 Samuel |
+| 10   | 撒母耳記下 | 2 Samuel | 2 Samuel   | Bible-2 Samuel |
+| 11   | 列王紀上 | 1 Kings  | 1 Kings     | Bible-1 Kings  |
+| 12   | 列王紀下 | 2 Kings  | 2 Kings     | Bible-2 Kings  |
+| 13   | 歷代志上 | 1 Chronicles | 1 Chronicles | Bible-1 Chronicles |
+| 14   | 歷代志下 | 2 Chronicles | 2 Chronicles | Bible-2 Chronicles |
+| 15   | 以斯拉記 | Ezra     | Ezra        | Bible-Ezra     |
+| 16   | 尼希米記 | Nehemiah | Nehemiah    | Bible-Nehemiah |
+| 17   | 以斯帖記 | Esther   | Esther      | Bible-Esther   |
+| 18   | 約伯記   | Job      | Job         | Bible-Job      |
+| 19   | 詩篇     | Psalms   | Psalms      | Bible-Psalms   |
+| 20   | 箴言     | Proverbs | Proverbs    | Bible-Proverbs |
+| 21   | 傳道書   | Ecclesiastes | Ecclesiastes | Bible-Ecclesiastes |
+| 22   | 雅歌     | Song of Songs | Song of Songs | Bible-Song of Songs |
+| 23   | 以賽亞書 | Isaiah   | Isaiah      | Bible-Isaiah   |
+| 24   | 耶利米書 | Jeremiah | Jeremiah    | Bible-Jeremiah |
+| 25   | 耶利米哀歌 | Lamentations | Lamentations | Bible-Lamentations |
+| 26   | 以西結書 | Ezekiel  | Ezekiel     | Bible-Ezekiel  |
+| 27   | 但以理書 | Daniel   | Daniel      | Bible-Daniel   |
+| 28   | 何西阿書 | Hosea    | Hosea       | Bible-Hosea    |
+| 29   | 約珥書   | Joel     | Joel        | Bible-Joel     |
+| 30   | 阿摩司書 | Amos     | Amos        | Bible-Amos     |
+| 31   | 俄巴底亞書 | Obadiah | Obadiah    | Bible-Obadiah  |
+| 32   | 約拿書   | Jonah    | Jonah       | Bible-Jonah    |
+| 33   | 彌迦書   | Micah    | Micah       | Bible-Micah    |
+| 34   | 那鴻書   | Nahum    | Nahum       | Bible-Nahum    |
+| 35   | 哈巴谷書 | Habakkuk | Habakkuk    | Bible-Habakkuk |
+| 36   | 西番雅書 | Zephaniah | Zephaniah  | Bible-Zephaniah |
+| 37   | 哈該書   | Haggai   | Haggai      | Bible-Haggai   |
+| 38   | 撒迦利亞書 | Zechariah | Zechariah | Bible-Zechariah |
+| 39   | 瑪拉基書 | Malachi  | Malachi     | Bible-Malachi  |
+
+### 新約 (New Testament) - 27卷
+
+| 序號 | 中文名稱 | 英文名稱 | bookEn 參數 | 向量資料庫名稱 |
+|------|----------|----------|-------------|----------------|
+| 40   | 馬太福音 | Matthew  | Matthew     | Bible-Matthew  |
+| 41   | 馬可福音 | Mark     | Mark        | Bible-Mark     |
+| 42   | 路加福音 | Luke     | Luke        | Bible-Luke     |
+| 43   | 約翰福音 | John     | John        | Bible-John     |
+| 44   | 使徒行傳 | Acts     | Acts        | Bible-Acts     |
+| 45   | 羅馬書   | Romans   | Romans      | Bible-Romans   |
+| 46   | 哥林多前書 | 1 Corinthians | 1 Corinthians | Bible-1 Corinthians |
+| 47   | 哥林多後書 | 2 Corinthians | 2 Corinthians | Bible-2 Corinthians |
+| 48   | 加拉太書 | Galatians | Galatians   | Bible-Galatians |
+| 49   | 以弗所書 | Ephesians | Ephesians   | Bible-Ephesians |
+| 50   | 腓立比書 | Philippians | Philippians | Bible-Philippians |
+| 51   | 歌羅西書 | Colossians | Colossians | Bible-Colossians |
+| 52   | 帖撒羅尼迦前書 | 1 Thessalonians | 1 Thessalonians | Bible-1 Thessalonians |
+| 53   | 帖撒羅尼迦後書 | 2 Thessalonians | 2 Thessalonians | Bible-2 Thessalonians |
+| 54   | 提摩太前書 | 1 Timothy | 1 Timothy   | Bible-1 Timothy |
+| 55   | 提摩太後書 | 2 Timothy | 2 Timothy   | Bible-2 Timothy |
+| 56   | 提多書   | Titus    | Titus       | Bible-Titus    |
+| 57   | 腓利門書 | Philemon | Philemon    | Bible-Philemon |
+| 58   | 希伯來書 | Hebrews  | Hebrews     | Bible-Hebrews  |
+| 59   | 雅各書   | James    | James       | Bible-James    |
+| 60   | 彼得前書 | 1 Peter  | 1 Peter     | Bible-1 Peter  |
+| 61   | 彼得後書 | 2 Peter  | 2 Peter     | Bible-2 Peter  |
+| 62   | 約翰一書 | 1 John   | 1 John      | Bible-1 John   |
+| 63   | 約翰二書 | 2 John   | 2 John      | Bible-2 John   |
+| 64   | 約翰三書 | 3 John   | 3 John      | Bible-3 John   |
+| 65   | 猶大書   | Jude     | Jude        | Bible-Jude     |
+| 66   | 啟示錄   | Revelation | Revelation | Bible-Revelation |
+
+## 程式碼範例
+
+### 1. 取得特定經卷的向量資料庫
+
+```javascript
+// 在 /api/bible/commentary/stream 中的實作
+const storePrefix = process.env.BIBLE_STORE_PREFIX || 'Bible-';
+const targetName = `${storePrefix}${bookEn}`;
+const storeResult = await getVectorStoreIdCachedByName(targetName);
+
+if (!storeResult) {
+  return res.status(503).json({ 
+    success: false, 
+    error: `該卷資料庫尚未建立完成，請稍後再試（${targetName}）` 
+  });
+}
+```
+
+### 2. 使用向量資料庫進行工具註釋
+
+```javascript
+// 創建工具 Assistant 時指定向量資料庫
+const assistant = await getOrCreateBibleCommentaryAssistant(targetVectorStoreId);
+
+// 在串流 Run 中覆寫 tool_resources
+const stream = await openai.beta.threads.runs.stream(thread.id, {
+  assistant_id: assistant.id,
+  tool_resources: {
+    file_search: { vector_store_ids: [targetVectorStoreId] }
+  }
+});
+```
+
+### 3. 前端呼叫範例
+
+```javascript
+const params = {
+  bookEn: 'Genesis',    // 對應 Bible-Genesis
+  ref: '6:4',
+  translation: 'CUV',
+  passageText: '那時候有偉人在地上...'
+};
+
+await processCommentaryToolStream('/api/bible/commentary/stream', params, commentaryDiv);
+```
+
+## 資料庫內容
+
+每個向量資料庫包含：
+- 該經卷的神學註釋文獻
+- 經文解釋和詮釋資料
+- 歷史背景和語言學資料
+- 神學家和聖經學者的評論
+
+## 注意事項
+
+1. 資料庫名稱區分大小寫
+2. 空格和連字符必須完全匹配
+3. 某些經卷可能尚未建立完成（file_counts.total = 0）
+4. 建議檢查資料庫可用性後再進行查詢
+5. 向量資料庫 ID 格式：vs_xxxxxxxxxxxxxxxxxxxxxxxx
+
+## 環境變數
+
+- `BIBLE_STORE_PREFIX`: 資料庫名稱前綴（預設: "Bible-"）
+- `VECTOR_STORE_ID`: 主要向量資料庫 ID（用於檔案分類）
+- `OPENAI_API_KEY`: OpenAI API 金鑰
+
+## 相關腳本
+
+- `scripts/build-66-bible-vector-stores.js`: 建立66個經卷資料庫
+- `scripts/summary-and-ensure-66-stores.js`: 檢查資料庫完整性
+- `scripts/build-66-bible-vector-stores-from-folder.js`: 從資料夾建立資料庫

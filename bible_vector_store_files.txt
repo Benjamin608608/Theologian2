@@ -1,0 +1,276 @@
+聖經66卷經卷向量資料庫文件清單
+=====================================
+
+查詢時間: 2025/8/16 下午3:00:46
+資料庫前綴: Bible-
+
+1. Genesis
+資料庫名稱: Bible-Genesis
+狀態: ❌ 資料庫不存在
+
+2. Exodus
+資料庫名稱: Bible-Exodus
+狀態: ❌ 資料庫不存在
+
+3. Leviticus
+資料庫名稱: Bible-Leviticus
+狀態: ❌ 資料庫不存在
+
+4. Numbers
+資料庫名稱: Bible-Numbers
+狀態: ❌ 資料庫不存在
+
+5. Deuteronomy
+資料庫名稱: Bible-Deuteronomy
+狀態: ❌ 資料庫不存在
+
+6. Joshua
+資料庫名稱: Bible-Joshua
+狀態: ❌ 資料庫不存在
+
+7. Judges
+資料庫名稱: Bible-Judges
+狀態: ❌ 資料庫不存在
+
+8. Ruth
+資料庫名稱: Bible-Ruth
+狀態: ❌ 資料庫不存在
+
+9. 1 Samuel
+資料庫名稱: Bible-1 Samuel
+狀態: ❌ 資料庫不存在
+
+10. 2 Samuel
+資料庫名稱: Bible-2 Samuel
+狀態: ❌ 資料庫不存在
+
+11. 1 Kings
+資料庫名稱: Bible-1 Kings
+狀態: ❌ 資料庫不存在
+
+12. 2 Kings
+資料庫名稱: Bible-2 Kings
+狀態: ❌ 資料庫不存在
+
+13. 1 Chronicles
+資料庫名稱: Bible-1 Chronicles
+狀態: ❌ 資料庫不存在
+
+14. 2 Chronicles
+資料庫名稱: Bible-2 Chronicles
+狀態: ❌ 資料庫不存在
+
+15. Ezra
+資料庫名稱: Bible-Ezra
+狀態: ❌ 資料庫不存在
+
+16. Nehemiah
+資料庫名稱: Bible-Nehemiah
+狀態: ❌ 資料庫不存在
+
+17. Esther
+資料庫名稱: Bible-Esther
+狀態: ❌ 資料庫不存在
+
+18. Job
+資料庫名稱: Bible-Job
+狀態: ❌ 資料庫不存在
+
+19. Psalms
+資料庫名稱: Bible-Psalms
+狀態: ❌ 資料庫不存在
+
+20. Proverbs
+資料庫名稱: Bible-Proverbs
+狀態: ❌ 資料庫不存在
+
+21. Ecclesiastes
+資料庫名稱: Bible-Ecclesiastes
+狀態: ❌ 資料庫不存在
+
+22. Song of Songs
+資料庫名稱: Bible-Song of Songs
+狀態: ❌ 資料庫不存在
+
+23. Isaiah
+資料庫名稱: Bible-Isaiah
+狀態: ❌ 資料庫不存在
+
+24. Jeremiah
+資料庫名稱: Bible-Jeremiah
+狀態: ❌ 資料庫不存在
+
+25. Lamentations
+資料庫名稱: Bible-Lamentations
+狀態: ❌ 資料庫不存在
+
+26. Ezekiel
+資料庫名稱: Bible-Ezekiel
+狀態: ❌ 資料庫不存在
+
+27. Daniel
+資料庫名稱: Bible-Daniel
+狀態: ❌ 資料庫不存在
+
+28. Hosea
+資料庫名稱: Bible-Hosea
+狀態: ❌ 資料庫不存在
+
+29. Joel
+資料庫名稱: Bible-Joel
+狀態: ❌ 資料庫不存在
+
+30. Amos
+資料庫名稱: Bible-Amos
+狀態: ❌ 資料庫不存在
+
+31. Obadiah
+資料庫名稱: Bible-Obadiah
+狀態: ❌ 資料庫不存在
+
+32. Jonah
+資料庫名稱: Bible-Jonah
+狀態: ❌ 資料庫不存在
+
+33. Micah
+資料庫名稱: Bible-Micah
+狀態: ❌ 資料庫不存在
+
+34. Nahum
+資料庫名稱: Bible-Nahum
+狀態: ❌ 資料庫不存在
+
+35. Habakkuk
+資料庫名稱: Bible-Habakkuk
+狀態: ❌ 資料庫不存在
+
+36. Zephaniah
+資料庫名稱: Bible-Zephaniah
+狀態: ❌ 資料庫不存在
+
+37. Haggai
+資料庫名稱: Bible-Haggai
+狀態: ❌ 資料庫不存在
+
+38. Zechariah
+資料庫名稱: Bible-Zechariah
+狀態: ❌ 資料庫不存在
+
+39. Malachi
+資料庫名稱: Bible-Malachi
+狀態: ❌ 資料庫不存在
+
+40. Matthew
+資料庫名稱: Bible-Matthew
+狀態: ❌ 資料庫不存在
+
+41. Mark
+資料庫名稱: Bible-Mark
+狀態: ❌ 資料庫不存在
+
+42. Luke
+資料庫名稱: Bible-Luke
+狀態: ❌ 資料庫不存在
+
+43. John
+資料庫名稱: Bible-John
+狀態: ❌ 資料庫不存在
+
+44. Acts
+資料庫名稱: Bible-Acts
+狀態: ❌ 資料庫不存在
+
+45. Romans
+資料庫名稱: Bible-Romans
+狀態: ❌ 資料庫不存在
+
+46. 1 Corinthians
+資料庫名稱: Bible-1 Corinthians
+狀態: ❌ 資料庫不存在
+
+47. 2 Corinthians
+資料庫名稱: Bible-2 Corinthians
+狀態: ❌ 資料庫不存在
+
+48. Galatians
+資料庫名稱: Bible-Galatians
+狀態: ❌ 資料庫不存在
+
+49. Ephesians
+資料庫名稱: Bible-Ephesians
+狀態: ❌ 資料庫不存在
+
+50. Philippians
+資料庫名稱: Bible-Philippians
+狀態: ❌ 資料庫不存在
+
+51. Colossians
+資料庫名稱: Bible-Colossians
+狀態: ❌ 資料庫不存在
+
+52. 1 Thessalonians
+資料庫名稱: Bible-1 Thessalonians
+狀態: ❌ 資料庫不存在
+
+53. 2 Thessalonians
+資料庫名稱: Bible-2 Thessalonians
+狀態: ❌ 資料庫不存在
+
+54. 1 Timothy
+資料庫名稱: Bible-1 Timothy
+狀態: ❌ 資料庫不存在
+
+55. 2 Timothy
+資料庫名稱: Bible-2 Timothy
+狀態: ❌ 資料庫不存在
+
+56. Titus
+資料庫名稱: Bible-Titus
+狀態: ❌ 資料庫不存在
+
+57. Philemon
+資料庫名稱: Bible-Philemon
+狀態: ❌ 資料庫不存在
+
+58. Hebrews
+資料庫名稱: Bible-Hebrews
+狀態: ❌ 資料庫不存在
+
+59. James
+資料庫名稱: Bible-James
+狀態: ❌ 資料庫不存在
+
+60. 1 Peter
+資料庫名稱: Bible-1 Peter
+狀態: ❌ 資料庫不存在
+
+61. 2 Peter
+資料庫名稱: Bible-2 Peter
+狀態: ❌ 資料庫不存在
+
+62. 1 John
+資料庫名稱: Bible-1 John
+狀態: ❌ 資料庫不存在
+
+63. 2 John
+資料庫名稱: Bible-2 John
+狀態: ❌ 資料庫不存在
+
+64. 3 John
+資料庫名稱: Bible-3 John
+狀態: ❌ 資料庫不存在
+
+65. Jude
+資料庫名稱: Bible-Jude
+狀態: ❌ 資料庫不存在
+
+66. Revelation
+資料庫名稱: Bible-Revelation
+狀態: ❌ 資料庫不存在
+
+查詢統計摘要
+=============
+總經卷數: 66
+可用資料庫: 0
+不可用資料庫: 66
+總文件數: 0

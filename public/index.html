@@ -4291,8 +4291,8 @@
                         let buffer = '';
                         let sourcesReceived = false;
                         
-                        // 清空容器並準備渲染
-                        commentaryDiv.innerHTML = '';
+                        // 創建作者骨架卡片
+                        createAuthorSkeletons(params.bookEn, commentaryDiv);
                         
                         function processToolStream() {
                             return reader.read().then(({ done, value }) => {
@@ -4321,10 +4321,10 @@
                                                     break;
                                                     
                                                 case 'sources':
-                                                    // 渲染來源清單
+                                                    // 渲染來源清單（包含文件清單和覆蓋率）
                                                     if (!sourcesReceived) {
                                                         sourcesReceived = true;
-                                                        renderSources(data.items, commentaryDiv);
+                                                        renderSourcesWithFiles(data, commentaryDiv);
                                                     }
                                                     break;
                                                     
@@ -4375,6 +4375,49 @@
                         reject(error);
                     });
                 });
+            }
+
+            // 創建作者骨架卡片
+            async function createAuthorSkeletons(bookEn, container) {
+                try {
+                    // 獲取該經卷的作者配置
+                    const response = await fetch(`/config/bible-books-config.json`);
+                    const booksConfig = await response.json();
+                    const bookConfig = booksConfig[bookEn];
+                    
+                    if (!bookConfig) {
+                        container.innerHTML = '<div class="text-center py-4">找不到該經卷的配置</div>';
+                        return;
+                    }
+                    
+                    container.innerHTML = '';
+                    
+                    // 為每位作者創建骨架卡片
+                    bookConfig.authors.forEach(author => {
+                        const skeletonBlock = document.createElement('div');
+                        skeletonBlock.className = 'mb-6 p-4 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color)] opacity-50';
+                        skeletonBlock.setAttribute('data-author-id', author.id);
+                        
+                        // 作者標題
+                        const titleDiv = document.createElement('div');
+                        titleDiv.className = 'font-bold text-lg text-[var(--text-primary)] mb-3';
+                        const dates = author.dates ? ` (${author.dates})` : '';
+                        titleDiv.innerHTML = `<strong>${author.name}${dates}</strong>`;
+                        skeletonBlock.appendChild(titleDiv);
+                        
+                        // 載入中動畫
+                        const loadingDiv = document.createElement('div');
+                        loadingDiv.className = 'text-[var(--text-secondary)] italic';
+                        loadingDiv.innerHTML = '正在載入註釋...';
+                        skeletonBlock.appendChild(loadingDiv);
+                        
+                        container.appendChild(skeletonBlock);
+                    });
+                    
+                } catch (error) {
+                    console.error('創建作者骨架失敗:', error);
+                    container.innerHTML = '<div class="text-center py-4">載入作者清單失敗</div>';
+                }
             }
 
             // 渲染單個作者註釋（帶打字機效果）
@@ -6613,6 +6656,66 @@
             console.log(`工具註釋模式: ${isEnabled ? '🔧 已啟用' : '📝 傳統模式'}`);
             return isEnabled;
         };
+
+        // 渲染包含文件清單的來源資訊
+        function renderSourcesWithFiles(data, container) {
+            const sourcesDiv = document.createElement('div');
+            sourcesDiv.className = 'mt-8 p-4 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color)]';
+            
+            // 標題和覆蓋率
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'font-bold text-lg text-[var(--text-primary)] mb-4';
+            
+            let coverageText = '';
+            if (data.coverage) {
+                const { received, expected, rate, missing } = data.coverage;
+                coverageText = ` (覆蓋率: ${received}/${expected} - ${rate}%)`;
+                if (missing.length > 0) {
+                    coverageText += `<div class="text-sm text-orange-600 mt-1">缺失作者: ${missing.join(', ')}</div>`;
+                }
+            }
+            
+            titleDiv.innerHTML = `📚 資料來源${coverageText}`;
+            sourcesDiv.appendChild(titleDiv);
+            
+            // 處理來源清單
+            if (data.items && data.items.length > 0) {
+                data.items.forEach((source, index) => {
+                    const sourceDiv = document.createElement('div');
+                    sourceDiv.className = 'mb-3 p-2 bg-[var(--bg-color)] rounded';
+                    
+                    if (source.id === 'database_files') {
+                        // 特殊處理資料庫文件清單
+                        sourceDiv.innerHTML = `
+                            <div class="font-semibold text-[var(--text-primary)]">${source.title}</div>
+                            <div class="text-sm text-[var(--text-secondary)] mt-1">${source.loc}</div>
+                        `;
+                        
+                        if (source.files && source.files.length > 0) {
+                            const filesList = document.createElement('div');
+                            filesList.className = 'mt-2 text-xs text-[var(--text-secondary)] max-h-32 overflow-y-auto';
+                            
+                            const fileItems = source.files.map((file, i) => 
+                                `<div class="py-1 border-b border-[var(--border-color)] last:border-b-0">${i + 1}. ${file}</div>`
+                            ).join('');
+                            
+                            filesList.innerHTML = fileItems;
+                            sourceDiv.appendChild(filesList);
+                        }
+                    } else {
+                        // 一般來源
+                        sourceDiv.innerHTML = `
+                            <div class="font-semibold text-[var(--text-primary)]">${index + 1}. ${source.title}</div>
+                            ${source.loc ? `<div class="text-sm text-[var(--text-secondary)] mt-1">${source.loc}</div>` : ''}
+                        `;
+                    }
+                    
+                    sourcesDiv.appendChild(sourceDiv);
+                });
+            }
+            
+            container.appendChild(sourcesDiv);
+        }
     </script>
 </body>
 </html>

@@ -2201,11 +2201,7 @@ ${fileList}`;
 
     await openai.beta.threads.messages.create(thread.id, {
       role: 'user',
-      content: userMessage,
-      // 將目標向量庫直接附加到本次訊息，提升檢索命中率
-      attachments: [
-        { vector_store_id: actualVectorStoreId }
-      ]
+      content: userMessage
     });
 
     // 創建串流 Run

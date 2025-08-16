@@ -2108,7 +2108,7 @@ async function processBibleExplainRequest(question, targetVectorStoreId, user, l
 // 新版本：基於工具呼叫的聖經註釋串流處理
 async function processBibleCommentaryToolStream(bookEn, ref, translation, passageText, targetVectorStoreId, user, language, res) {
   try {
-    // 載入聖經經卷配置（用於作者清單和向量資料庫 ID）
+    // 載入聖經經卷配置（用於作者清單和向量資料庫名稱）
     let booksConfig, bookConfig;
     try {
       booksConfig = require('./config/bible-books-config.json');
@@ -2118,13 +2118,14 @@ async function processBibleCommentaryToolStream(bookEn, ref, translation, passag
         throw new Error(`未找到 ${bookEn} 的配置`);
       }
       
-      console.log(`📖 使用硬編碼配置 - ${bookEn}: ${bookConfig.storeId}`);
+      console.log(`📖 使用配置中的資料庫名稱 - ${bookEn}: ${bookConfig.storeName}`);
       
     } catch (error) {
       // 如果配置文件不存在，使用默認配置
       console.warn(`⚠️ 無法載入配置文件，使用默認配置: ${error.message}`);
+      const storePrefix = process.env.BIBLE_STORE_PREFIX || 'Bible-';
       bookConfig = {
-        storeId: targetVectorStoreId, // 使用傳入的 ID 作為備用
+        storeName: `${storePrefix}${bookEn}`, // 使用標準命名
         authors: [
           { id: 'henry', name: 'Matthew Henry', fullName: 'Matthew Henry' },
           { id: 'calvin', name: 'John Calvin', fullName: 'John Calvin' },
@@ -2134,8 +2135,16 @@ async function processBibleCommentaryToolStream(bookEn, ref, translation, passag
       };
     }
     
-    // 使用配置中的硬編碼 ID，確保正確性
-    const actualVectorStoreId = bookConfig.storeId || targetVectorStoreId;
+    // 使用資料庫名稱動態查找 ID，確保正確性和穩定性
+    const storeName = bookConfig.storeName;
+    const storeResult = await getVectorStoreIdCachedByName(storeName);
+    
+    if (!storeResult) {
+      throw new Error(`資料庫 ${storeName} 不存在或無法訪問`);
+    }
+    
+    const actualVectorStoreId = storeResult.id;
+    console.log(`✅ 找到資料庫 ${storeName} -> ID: ${actualVectorStoreId}`);
     const assistant = await getOrCreateBibleCommentaryAssistant(actualVectorStoreId);
     const thread = await openai.beta.threads.create();
 
@@ -2532,24 +2541,6 @@ app.post('/api/bible/commentary/stream', ensureAuthenticated, async (req, res) =
       return res.status(400).json({ success: false, error: '缺少必要參數 bookEn 或 ref' });
     }
 
-    const storePrefix = process.env.BIBLE_STORE_PREFIX || 'Bible-';
-    const targetName = `${storePrefix}${bookEn}`;
-    const storeResult = await getVectorStoreIdCachedByName(targetName);
-    if (!storeResult) {
-      return res.status(503).json({ success: false, error: `該卷資料庫尚未建立完成，請稍後再試（${targetName}）` });
-    }
-    
-    // 檢查是否為空白store
-    const fileCount = storeResult.store?.file_counts?.total || 0;
-    if (fileCount === 0) {
-      return res.status(503).json({ 
-        success: false, 
-        error: `${bookEn}卷的註釋資料庫目前暫無內容，我們正在努力補充中，請選擇其他經卷或稍後再試。` 
-      });
-    }
-    
-    const vsId = storeResult.id;
-
     // 設置 SSE 響應頭
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
@@ -2560,8 +2551,8 @@ app.post('/api/bible/commentary/stream', ensureAuthenticated, async (req, res) =
     // 發送初始連接確認
     res.write('data: {"type": "connected"}\n\n');
 
-    // 使用新的工具串流處理
-    await processBibleCommentaryToolStream(bookEn, ref, translation, passageText, vsId, req.user, language, res);
+    // 使用新的工具串流處理（資料庫檢查在函數內部進行）
+    await processBibleCommentaryToolStream(bookEn, ref, translation, passageText, null, req.user, language, res);
 
   } catch (error) {
     console.error('工具串流聖經註釋錯誤:', error.message);

@@ -2562,6 +2562,21 @@ app.post('/api/bible/commentary/stream', ensureAuthenticated, async (req, res) =
   }
 });
 
+// 提前註冊：公開取得經卷配置（避免被後面的 404 中介攔截）
+app.get('/api/bible/book-config/:bookEn', async (req, res) => {
+  try {
+    const { bookEn } = req.params;
+    const booksConfig = require('./config/bible-books-config.json');
+    if (!booksConfig[bookEn]) {
+      return res.status(404).json({ success: false, error: `未找到 ${bookEn} 的配置` });
+    }
+    res.json({ success: true, [bookEn]: booksConfig[bookEn] });
+  } catch (error) {
+    console.error('獲取經卷配置錯誤(early route):', error);
+    res.status(500).json({ success: false, error: '讀取配置失敗' });
+  }
+});
+
 // 舊版本：聖經經文解釋 - 串流版本
 app.post('/api/bible/explain/stream', ensureAuthenticated, async (req, res) => {
   try {

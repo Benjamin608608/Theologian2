@@ -23,6 +23,20 @@ let assistantWarmupInterval = null; // 定期保溫計時器
 // 作者對照表
 let authorTranslations = {};
 
+// 聖經註釋作者對照表（ID → 顯示名稱）
+const COMMENTARY_AUTHORS = {
+  'calvin': '約翰·加爾文（1509–1564）',
+  'luther': '馬丁·路德（1483–1546）',
+  'augustine': '奧古斯丁（354–430）',
+  'chrysostom': '約翰·屈梭多模（349–407）',
+  'aquinas': '多馬·阿奎那（1225–1274）',
+  'wesley': '約翰·衛斯理（1703–1791）',
+  'spurgeon': '司布真（1834–1892）',
+  'henry': '馬太·亨利（1662–1714）',
+  'clarke': '亞當·克拉克（1762–1832）',
+  'gill': '約翰·吉爾（1697–1771）'
+};
+
 // 載入作者對照表
 async function loadAuthorTranslations() {
     try {
@@ -204,6 +218,60 @@ const openai = new OpenAI({
 
 // 模型設定：優先使用環境變數（預設 gpt-5），若失敗則回退到 gpt-4o-mini
 const PREFERRED_ASSISTANT_MODEL = process.env.OPENAI_ASSISTANT_MODEL || process.env.OPENAI_MODEL || 'gpt-5';
+
+// 聖經註釋工具函式定義
+const BIBLE_COMMENTARY_TOOLS = [
+  {
+    type: "function",
+    name: "emit_commentary",
+    description: "輸出某位作者對當前經文的註釋（每位作者呼叫一次）",
+    parameters: {
+      type: "object",
+      properties: {
+        author_id: { 
+          type: "string", 
+          description: "作者ID，必須來自提供的作者清單"
+        },
+        commentary: { 
+          type: "string",
+          description: "該作者的註釋內容，建議120-180字或3-5點條列"
+        },
+        citations: {
+          type: "array",
+          items: { type: "string" },
+          description: "引用來源ID清單（如 S1、S2...），必須來自提供的來源清單"
+        }
+      },
+      required: ["author_id", "commentary"],
+      additionalProperties: false
+    }
+  },
+  {
+    type: "function",
+    name: "emit_sources",
+    description: "輸出本次回答用到的來源清單",
+    parameters: {
+      type: "object",
+      properties: {
+        sources: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              id: { type: "string", description: "來源ID（如 S1）" },
+              title: { type: "string", description: "書名或條目名稱" },
+              loc: { type: "string", description: "章節或頁碼（可選）" }
+            },
+            required: ["id", "title"],
+            additionalProperties: false
+          }
+        }
+      },
+      required: ["sources"],
+      additionalProperties: false
+    }
+  }
+];
 
 // 簡易 LRU/TTL 快取：聖經經文解釋 & 每卷向量庫 ID
 // 需求：經文解釋不使用快取 → 直接關閉即可
@@ -1215,6 +1283,83 @@ function setCachedResult(question, result) {
     }
 }
 
+// 獲取或創建聖經註釋工具 Assistant
+async function getOrCreateBibleCommentaryAssistant() {
+    console.log('🔄 創建聖經註釋工具 Assistant...');
+    
+    const vectorStoreId = process.env.VECTOR_STORE_ID;
+    
+    try {
+        let modelToUse = PREFERRED_ASSISTANT_MODEL;
+        try {
+            const assistant = await openai.beta.assistants.create({
+                model: modelToUse,
+                name: 'Bible Commentary Tool Assistant',
+                instructions: `你是神學註釋助手。你必須「僅以工具呼叫」輸出內容，不得輸出任何非工具的文字。
+
+重要規則：
+1. 對每位作者各呼叫一次 emit_commentary({author_id, commentary, citations})
+2. 最後呼叫一次 emit_sources({sources:[{id,title,loc?},...]})
+3. 不得虛構作者或來源；只引用我提供的來源ID
+4. 每位作者的 commentary 建議 120–180 字（或 3–5 點條列）
+5. author_id 和 citations 只能使用用戶提供的ID清單
+6. 使用繁體中文回答
+
+格式要求：
+- 直接使用工具輸出，不要任何額外文字
+- commentary 內容要準確、簡潔且有幫助
+- citations 只引用相關的來源ID`,
+                tools: vectorStoreId ? [{ type: 'file_search' }, ...BIBLE_COMMENTARY_TOOLS] : BIBLE_COMMENTARY_TOOLS,
+                tool_resources: vectorStoreId ? {
+                    file_search: {
+                        vector_store_ids: [vectorStoreId]
+                    }
+                } : undefined,
+                temperature: 0.2,
+                parallel_tool_calls: true
+            });
+            
+            console.log(`✅ 聖經註釋工具 Assistant 創建成功`);
+            return assistant;
+        } catch (e) {
+            console.warn(`⚠️ 以 ${modelToUse} 建立註釋 Assistant 失敗，回退至 gpt-4o：`, e.message);
+            modelToUse = 'gpt-4o';
+            const assistant = await openai.beta.assistants.create({
+                model: modelToUse,
+                name: 'Bible Commentary Tool Assistant',
+                instructions: `你是神學註釋助手。你必須「僅以工具呼叫」輸出內容，不得輸出任何非工具的文字。
+
+重要規則：
+1. 對每位作者各呼叫一次 emit_commentary({author_id, commentary, citations})
+2. 最後呼叫一次 emit_sources({sources:[{id,title,loc?},...]})
+3. 不得虛構作者或來源；只引用我提供的來源ID
+4. 每位作者的 commentary 建議 120–180 字（或 3–5 點條列）
+5. author_id 和 citations 只能使用用戶提供的ID清單
+6. 使用繁體中文回答
+
+格式要求：
+- 直接使用工具輸出，不要任何額外文字
+- commentary 內容要準確、簡潔且有幫助
+- citations 只引用相關的來源ID`,
+                tools: vectorStoreId ? [{ type: 'file_search' }, ...BIBLE_COMMENTARY_TOOLS] : BIBLE_COMMENTARY_TOOLS,
+                tool_resources: vectorStoreId ? {
+                    file_search: {
+                        vector_store_ids: [vectorStoreId]
+                    }
+                } : undefined,
+                temperature: 0.2,
+                parallel_tool_calls: true
+            });
+            
+            console.log(`✅ 聖經註釋工具 Assistant 創建成功`);
+            return assistant;
+        }
+    } catch (error) {
+        console.error('❌ 聖經註釋工具 Assistant 創建失敗:', error.message);
+        throw error;
+    }
+}
+
 // 獲取或創建 Assistant
 async function getOrCreateAssistant() {
     if (!globalAssistant) {
@@ -1956,7 +2101,142 @@ async function processBibleExplainRequest(question, targetVectorStoreId, user, l
   }
 }
 
-// 串流版本的聖經經文解釋處理
+// 新版本：基於工具呼叫的聖經註釋串流處理
+async function processBibleCommentaryToolStream(bookEn, ref, translation, passageText, targetVectorStoreId, user, language, res) {
+  try {
+    // 建立工具 Assistant
+    const assistant = await getOrCreateBibleCommentaryAssistant();
+    const thread = await openai.beta.threads.create();
+
+    // 從向量庫檢索相關來源（簡化版本）
+    const availableAuthors = ['calvin', 'luther', 'augustine', 'henry', 'spurgeon'];
+    const availableSources = [
+      { id: 'S1', title: 'Calvin, Commentary on John', loc: 'Jn 3:16' },
+      { id: 'S2', title: 'Luther, Works, Vol X', loc: 'p.123' },
+      { id: 'S3', title: 'Augustine, Homilies on John', loc: 'Hom 12' },
+      { id: 'S4', title: 'Henry, Commentary on the Whole Bible', loc: bookEn + ' ' + ref },
+      { id: 'S5', title: 'Spurgeon, Treasury of David', loc: 'Ps ' + ref }
+    ];
+
+    // 構建用戶訊息
+    const userMessage = `經文：${bookEn} ${ref}
+${translation ? `版本：${translation}` : ''}
+${passageText ? `經文內容：\n${passageText}` : ''}
+
+可用作者 ID：${availableAuthors.join(', ')}
+可引用來源：
+${availableSources.map(s => `${s.id} ${s.title} — ${s.loc}`).join('\n')}
+
+任務：請依規則產生每位相關作者的註釋，並引用適當的來源ID。只處理與此經文相關的作者。`;
+
+    await openai.beta.threads.messages.create(thread.id, {
+      role: 'user',
+      content: userMessage
+    });
+
+    // 創建串流 Run
+    const stream = await openai.beta.threads.runs.stream(thread.id, {
+      assistant_id: assistant.id,
+      tool_resources: {
+        file_search: { vector_store_ids: [targetVectorStoreId] }
+      }
+    });
+
+    // 工具呼叫累積器
+    const toolCalls = new Map(); // tool_call_id -> { name, args_buffer }
+    let sourcesReceived = false;
+
+    // 處理串流事件
+    stream.on('toolCallDelta', (toolCallDelta) => {
+      const { id, function: func } = toolCallDelta;
+      
+      if (!toolCalls.has(id)) {
+        toolCalls.set(id, {
+          name: func?.name || '',
+          args_buffer: ''
+        });
+      }
+      
+      const toolCall = toolCalls.get(id);
+      if (func?.arguments) {
+        toolCall.args_buffer += func.arguments;
+      }
+    });
+
+    stream.on('toolCallDone', async (toolCall) => {
+      try {
+        const { id, function: func } = toolCall;
+        const args = JSON.parse(func.arguments);
+        
+        if (func.name === 'emit_commentary') {
+          // 驗證 author_id
+          if (!availableAuthors.includes(args.author_id)) {
+            console.warn(`無效的 author_id: ${args.author_id}`);
+            return;
+          }
+          
+          // 驗證 citations
+          if (args.citations) {
+            const validSources = availableSources.map(s => s.id);
+            args.citations = args.citations.filter(c => validSources.includes(c));
+          }
+          
+          // 獲取顯示名稱
+          const displayName = COMMENTARY_AUTHORS[args.author_id] || args.author_id;
+          
+          // 發送作者註釋事件
+          const authorEvent = {
+            type: 'author',
+            author_id: args.author_id,
+            display: displayName,
+            commentary: args.commentary,
+            citations: args.citations || []
+          };
+          
+          res.write(`data: ${JSON.stringify(authorEvent)}\n\n`);
+          
+        } else if (func.name === 'emit_sources' && !sourcesReceived) {
+          sourcesReceived = true;
+          
+          // 驗證來源清單
+          const validSources = args.sources.filter(s => 
+            availableSources.some(as => as.id === s.id)
+          );
+          
+          // 發送來源事件
+          const sourcesEvent = {
+            type: 'sources',
+            items: validSources
+          };
+          
+          res.write(`data: ${JSON.stringify(sourcesEvent)}\n\n`);
+        }
+        
+      } catch (error) {
+        console.error('工具呼叫處理錯誤:', error);
+      }
+    });
+
+    stream.on('end', () => {
+      // 發送完成事件
+      res.write(`data: ${JSON.stringify({ type: 'done' })}\n\n`);
+      res.end();
+    });
+
+    stream.on('error', (error) => {
+      console.error('串流錯誤:', error);
+      res.write(`data: ${JSON.stringify({ type: 'error', error: '處理失敗' })}\n\n`);
+      res.end();
+    });
+
+  } catch (error) {
+    console.error('工具串流處理錯誤:', error);
+    res.write(`data: ${JSON.stringify({ type: 'error', error: '初始化失敗' })}\n\n`);
+    res.end();
+  }
+}
+
+// 舊版本：串流版本的聖經經文解釋處理
 async function processBibleExplainRequestStream(question, targetVectorStoreId, user, language, res, cacheKey) {
   try {
     // 建立 thread 與訊息
@@ -2127,7 +2407,54 @@ async function processBibleExplainRequestStream(question, targetVectorStoreId, u
   }
 }
 
-// 聖經經文解釋 - 串流版本
+// 新版本：基於工具呼叫的聖經註釋 - 串流版本
+app.post('/api/bible/commentary/stream', ensureAuthenticated, async (req, res) => {
+  try {
+    const { bookEn, ref, translation, language = 'zh', passageText } = req.body || {};
+
+    if (!bookEn || !ref) {
+      return res.status(400).json({ success: false, error: '缺少必要參數 bookEn 或 ref' });
+    }
+
+    const storePrefix = process.env.BIBLE_STORE_PREFIX || 'Bible-';
+    const targetName = `${storePrefix}${bookEn}`;
+    const storeResult = await getVectorStoreIdCachedByName(targetName);
+    if (!storeResult) {
+      return res.status(503).json({ success: false, error: `該卷資料庫尚未建立完成，請稍後再試（${targetName}）` });
+    }
+    
+    // 檢查是否為空白store
+    const fileCount = storeResult.store?.file_counts?.total || 0;
+    if (fileCount === 0) {
+      return res.status(503).json({ 
+        success: false, 
+        error: `${bookEn}卷的註釋資料庫目前暫無內容，我們正在努力補充中，請選擇其他經卷或稍後再試。` 
+      });
+    }
+    
+    const vsId = storeResult.id;
+
+    // 設置 SSE 響應頭
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Cache-Control');
+
+    // 發送初始連接確認
+    res.write('data: {"type": "connected"}\n\n');
+
+    // 使用新的工具串流處理
+    await processBibleCommentaryToolStream(bookEn, ref, translation, passageText, vsId, req.user, language, res);
+
+  } catch (error) {
+    console.error('工具串流聖經註釋錯誤:', error.message);
+    res.write(`data: {"type": "error", "error": "處理失敗，請稍後再試"}\n\n`);
+    res.end();
+  }
+});
+
+// 舊版本：聖經經文解釋 - 串流版本
 app.post('/api/bible/explain/stream', ensureAuthenticated, async (req, res) => {
   try {
     const { bookEn, ref, translation, language = 'zh', passageText } = req.body || {};

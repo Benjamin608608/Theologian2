@@ -4233,14 +4233,24 @@
                         ? targetVerses.map(v => `${v.verse}. ${v.text}`).join('\n')
                         : '';
 
-                    // 使用串流版本的聖經解釋API
-                    await searchTheologicalCommentaryStream({
+                    // 檢查是否啟用工具模式（可通過 localStorage 設置）
+                    const useToolMode = localStorage.getItem('commentaryToolMode') === 'true';
+                    
+                    const params = {
                         bookEn: book.en,
                         ref: ref,
                         passageText,
                         translation: version,
                         language: window.currentLanguage || 'zh'
-                    }, commentaryDiv);
+                    };
+                    
+                    if (useToolMode) {
+                        console.log('🔧 使用工具註釋模式');
+                        await processCommentaryToolStream('/api/bible/commentary/stream', params, commentaryDiv);
+                    } else {
+                        console.log('📝 使用傳統註釋模式');
+                        await searchTheologicalCommentaryStream(params, commentaryDiv);
+                    }
                 } catch (error) {
                     console.error('搜尋神學家註釋失敗:', error);
                     commentaryDiv.innerHTML = `
@@ -4251,7 +4261,196 @@
                 }
             }
 
-            // 串流版本的神學家註釋搜尋
+            // 新版本：工具呼叫註釋串流處理
+            async function processCommentaryToolStream(endpoint, params, commentaryDiv) {
+                return new Promise((resolve, reject) => {
+                    const controller = new AbortController();
+                    
+                    // 30秒超時
+                    const timeoutId = setTimeout(() => {
+                        controller.abort();
+                        console.log('工具註釋請求超時');
+                    }, 30000);
+                    
+                    fetch(endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(params),
+                        signal: controller.signal
+                    })
+                    .then(response => {
+                        clearTimeout(timeoutId);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        
+                        const reader = response.body.getReader();
+                        const decoder = new TextDecoder();
+                        let buffer = '';
+                        let sourcesReceived = false;
+                        
+                        // 清空容器並準備渲染
+                        commentaryDiv.innerHTML = '';
+                        
+                        function processToolStream() {
+                            return reader.read().then(({ done, value }) => {
+                                if (done) {
+                                    resolve();
+                                    return;
+                                }
+                                
+                                buffer += decoder.decode(value, { stream: true });
+                                const lines = buffer.split('\n');
+                                buffer = lines.pop(); // 保留未完成的行
+                                
+                                for (const line of lines) {
+                                    if (line.startsWith('data: ')) {
+                                        try {
+                                            const data = JSON.parse(line.slice(6));
+                                            
+                                            switch (data.type) {
+                                                case 'connected':
+                                                    console.log('工具註釋串流連接已建立');
+                                                    break;
+                                                    
+                                                case 'author':
+                                                    // 立即渲染作者註釋
+                                                    renderAuthorCommentary(data, commentaryDiv);
+                                                    break;
+                                                    
+                                                case 'sources':
+                                                    // 渲染來源清單
+                                                    if (!sourcesReceived) {
+                                                        sourcesReceived = true;
+                                                        renderSources(data.items, commentaryDiv);
+                                                    }
+                                                    break;
+                                                    
+                                                case 'done':
+                                                    console.log('工具註釋串流完成');
+                                                    resolve();
+                                                    return;
+                                                    
+                                                case 'error':
+                                                    console.error('工具註釋串流錯誤:', data.error);
+                                                    commentaryDiv.innerHTML = `
+                                                        <div class="text-red-600 text-center py-4">
+                                                            <p>註釋生成失敗：${data.error}</p>
+                                                        </div>
+                                                    `;
+                                                    reject(new Error(data.error));
+                                                    return;
+                                            }
+                                        } catch (e) {
+                                            console.error('解析工具註釋SSE數據錯誤:', e);
+                                        }
+                                    }
+                                }
+                                
+                                return processToolStream();
+                            });
+                        }
+                        
+                        return processToolStream();
+                    })
+                    .catch(error => {
+                        clearTimeout(timeoutId);
+                        console.error('工具註釋串流請求錯誤:', error);
+                        
+                        let errorMsg = '連接失敗，請稍後再試';
+                        if (error.name === 'AbortError') {
+                            errorMsg = '請求超時，請稍後再試';
+                        }
+                        
+                        commentaryDiv.innerHTML = `
+                            <div class="text-red-600 text-center py-4">
+                                <p>註釋生成失敗：${errorMsg}</p>
+                                <button onclick="location.reload()" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                                    重新載入
+                                </button>
+                            </div>
+                        `;
+                        reject(error);
+                    });
+                });
+            }
+
+            // 渲染單個作者註釋（帶打字機效果）
+            function renderAuthorCommentary(data, container) {
+                // 創建作者區塊
+                const authorBlock = document.createElement('div');
+                authorBlock.className = 'mb-6 p-4 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color)]';
+                
+                // 作者標題
+                const titleDiv = document.createElement('div');
+                titleDiv.className = 'font-bold text-lg text-[var(--text-primary)] mb-3';
+                titleDiv.innerHTML = `<strong>${data.display}</strong>`;
+                authorBlock.appendChild(titleDiv);
+                
+                // 註釋內容區域
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'text-[var(--text-primary)] leading-relaxed mb-3';
+                authorBlock.appendChild(contentDiv);
+                
+                // 引用標記
+                if (data.citations && data.citations.length > 0) {
+                    const citationsDiv = document.createElement('div');
+                    citationsDiv.className = 'text-sm text-[var(--text-secondary)] mt-2';
+                    citationsDiv.innerHTML = data.citations.map(c => `<span class="citation-link">[${c}]</span>`).join(' ');
+                    authorBlock.appendChild(citationsDiv);
+                }
+                
+                container.appendChild(authorBlock);
+                
+                // 打字機效果渲染註釋內容
+                typewriterEffect(contentDiv, data.commentary, 30); // 30ms 間隔
+            }
+
+            // 渲染來源清單
+            function renderSources(sources, container) {
+                if (sources && sources.length > 0) {
+                    const sourcesDiv = document.createElement('div');
+                    sourcesDiv.className = 'mt-8 p-4 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color)]';
+                    
+                    const title = document.createElement('h3');
+                    title.className = 'font-bold text-[var(--text-primary)] mb-3';
+                    title.textContent = '📚 資料來源：';
+                    sourcesDiv.appendChild(title);
+                    
+                    const sourcesList = document.createElement('div');
+                    sourcesList.className = 'space-y-2';
+                    
+                    sources.forEach((source, index) => {
+                        const sourceDiv = document.createElement('div');
+                        sourceDiv.className = 'text-sm text-[var(--text-secondary)]';
+                        sourceDiv.innerHTML = `<strong>[${source.id}]</strong> ${source.title}${source.loc ? ` — ${source.loc}` : ''}`;
+                        sourcesList.appendChild(sourceDiv);
+                    });
+                    
+                    sourcesDiv.appendChild(sourcesList);
+                    container.appendChild(sourcesDiv);
+                }
+            }
+
+            // 打字機效果
+            function typewriterEffect(element, text, speed = 30) {
+                element.textContent = '';
+                let i = 0;
+                
+                function typeChar() {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeChar, speed);
+                    }
+                }
+                
+                typeChar();
+            }
+
+            // 舊版本：串流版本的神學家註釋搜尋
             async function searchTheologicalCommentaryStream(params, commentaryDiv) {
                 return new Promise((resolve, reject) => {
                     const renderer = new SmartMarkdownRenderer();
@@ -6396,6 +6595,24 @@
         navLabels.forEach(el => {
             el.style.fontSize = (window.innerWidth <= 480) ? '0.5rem' : '1rem';
         });
+        // 工具模式控制（開發用）
+        window.enableToolMode = function() {
+            localStorage.setItem('commentaryToolMode', 'true');
+            console.log('🔧 已啟用工具註釋模式');
+            console.log('💡 重新查詢經文生效');
+        };
+        
+        window.disableToolMode = function() {
+            localStorage.setItem('commentaryToolMode', 'false');
+            console.log('📝 已切換回傳統註釋模式');
+            console.log('💡 重新查詢經文生效');
+        };
+        
+        window.checkToolMode = function() {
+            const isEnabled = localStorage.getItem('commentaryToolMode') === 'true';
+            console.log(`工具註釋模式: ${isEnabled ? '🔧 已啟用' : '📝 傳統模式'}`);
+            return isEnabled;
+        };
     </script>
 </body>
 </html>

@@ -3060,6 +3060,98 @@ app.get('/api/bible/vector-status', ensureAuthenticated, async (req, res) => {
   }
 });
 
+// 列出 66 卷各自資料庫的檔案清單（支援 format=json|txt，預設 json）
+app.get('/api/bible/vector-inventory', ensureAuthenticated, async (req, res) => {
+  try {
+    const format = (req.query.format || 'json').toString().toLowerCase();
+    const storePrefix = process.env.BIBLE_STORE_PREFIX || 'Bible-';
+
+    const books = [
+      'Genesis','Exodus','Leviticus','Numbers','Deuteronomy','Joshua','Judges','Ruth',
+      '1 Samuel','2 Samuel','1 Kings','2 Kings','1 Chronicles','2 Chronicles','Ezra','Nehemiah','Esther','Job','Psalms','Proverbs','Ecclesiastes','Song of Songs','Isaiah','Jeremiah','Lamentations','Ezekiel','Daniel','Hosea','Joel','Amos','Obadiah','Jonah','Micah','Nahum','Habakkuk','Zephaniah','Haggai','Zechariah','Malachi',
+      'Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'
+    ];
+
+    const results = [];
+    let foundCount = 0;
+    let totalFiles = 0;
+
+    for (const bookEn of books) {
+      const targetName = `${storePrefix}${bookEn}`;
+      const storeResult = await getVectorStoreIdCachedByName(targetName);
+
+      const entry = {
+        book: bookEn,
+        storeName: storeResult?.store?.name || targetName,
+        storeId: storeResult?.id || null,
+        fileCount: storeResult?.store?.file_counts?.total || 0,
+        files: []
+      };
+
+      if (storeResult && entry.fileCount > 0) {
+        foundCount += 1;
+        // 分頁列出所有檔案並取回檔名
+        let after;
+        while (true) {
+          const fl = await openai.vectorStores.files.list(storeResult.id, { limit: 100, after });
+          for (const f of fl.data) {
+            try {
+              const meta = await openai.files.retrieve(f.id);
+              entry.files.push({ id: f.id, filename: meta.filename, bytes: meta.bytes });
+            } catch {
+              entry.files.push({ id: f.id, filename: null, bytes: null });
+            }
+          }
+          if (!fl.has_more) break;
+          after = fl.last_id;
+        }
+        totalFiles += entry.files.length;
+      }
+
+      results.push(entry);
+    }
+
+    if (format === 'txt') {
+      res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+      let out = '';
+      out += '聖經66卷向量資料庫檔案清單\n';
+      out += '================================\n\n';
+      out += `前綴：${storePrefix}\n`;
+      out += `生成時間：${new Date().toLocaleString('zh-TW')}\n`;
+      out += `成功匹配：${foundCount}/66\n`;
+      out += `合計檔案：${totalFiles}\n\n`;
+      for (let i = 0; i < results.length; i++) {
+        const r = results[i];
+        out += `${i + 1}. ${r.book}\n`;
+        out += `資料庫名稱：${r.storeName}\n`;
+        out += `資料庫 ID：${r.storeId || '(未找到)'}\n`;
+        out += `文件數量：${r.fileCount}\n`;
+        if (r.files.length > 0) {
+          out += '文件清單：\n';
+          for (const f of r.files) {
+            out += `  - ${f.filename || f.id}${f.bytes ? ` (${f.bytes} bytes)` : ''}\n`;
+          }
+        }
+        out += '\n';
+      }
+      return res.send(out);
+    }
+
+    return res.json({
+      success: true,
+      prefix: storePrefix,
+      generatedAt: new Date().toISOString(),
+      foundCount,
+      totalBooks: books.length,
+      totalFiles,
+      books: results
+    });
+  } catch (e) {
+    console.error('vector-inventory error:', e);
+    res.status(500).json({ success: false, error: e.message });
+  }
+});
+
 app.get('/login', (req, res) => {
   res.redirect('/');
 });
